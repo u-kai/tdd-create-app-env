@@ -10,7 +10,13 @@ topMkdir.mkdir()
 
 const packageJson = "package.json"
 const topPackageJsonPath = path.resolve(topDirectory,packageJson)
-const topPackageJsonMaker = new FileMaker(topPackageJsonPath,"")
+const topPackageJsonData = 
+{
+    "exclude":[
+        "."
+    ]
+}
+const topPackageJsonMaker = new FileMaker(topPackageJsonPath,topPackageJsonData)
 topPackageJsonMaker.writeFile()
 
 it("is top directory exits",()=>{
