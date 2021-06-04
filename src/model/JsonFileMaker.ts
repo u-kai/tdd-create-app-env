@@ -1,5 +1,5 @@
 import {FileMaker} from "./FileMaker"
-import {ObjectType} from "../types/ObjectsType"
+import {ObjectType} from "types/ObjectsType"
 import * as fs from "fs"
 
 export class JsonFileMaker extends FileMaker{
