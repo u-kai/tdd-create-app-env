@@ -8,14 +8,6 @@ export class JsonFileMaker extends FileMaker{
         super(filePath,"")
         this.objectData = objectData
     }
-
-    createClone = () => {
-        let clone:ObjectType = {}
-        Object.keys(this.objectData).map((key)=>{
-            clone[key] = this.objectData[key]
-        })
-        return clone
-    }
     writeFile = () => {
         fs.writeFileSync(this.filePath,JSON.stringify(this.objectData,null,"\t"))
     }
