@@ -1,9 +1,9 @@
-import {DirectoryMaker} from "../model/DirectoryMaker"
+import { DirectoryMaker } from '../model/DirectoryMaker'
 
-export class CreateTopDirectory{
-    dirPath:string
+export class CreateTopDirectory {
+    dirPath: string
 
-    constructor(dirPath:string){
+    constructor(dirPath: string) {
         this.dirPath = dirPath
     }
     mkdir = () => {
