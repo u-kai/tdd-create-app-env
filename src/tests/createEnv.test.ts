@@ -16,7 +16,7 @@ const topPackageJsonData =
         "."
     ]
 }
-const topPackageJsonMaker = new FileMaker(topPackageJsonPath,topPackageJsonData)
+const topPackageJsonMaker = new FileMaker(topPackageJsonPath,"")
 topPackageJsonMaker.writeFile()
 
 it("is top directory exits",()=>{
