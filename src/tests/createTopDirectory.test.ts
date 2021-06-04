@@ -3,7 +3,7 @@ import * as path from "path"
 import * as fs from "fs"
 
 
-const topDirectoryPath = path.resolve(process.argv[3])
+const topDirectoryPath = path.resolve("top")
 const createTopDirectory = new CreateTopDirectory(topDirectoryPath)
 createTopDirectory.mkdir()
 
