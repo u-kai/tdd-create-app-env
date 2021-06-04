@@ -1,6 +1,5 @@
-import {execSync} from "child_process"
 import * as fs from "fs"
-import {DirectoryMaker} from "../createEnv"
+import {DirectoryMaker} from "../model/DirectoryMaker"
 
 
 const topDirectory = process.argv[3]
