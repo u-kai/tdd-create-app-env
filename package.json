@@ -25,11 +25,14 @@
 		"jest": "^27.0.4",
 		"lint-staged": "^11.0.0",
 		"prettier": "^2.3.0",
-		"ts-jest": "^27.0.2"
+		"ts-jest": "^27.0.2",
+		"tsconfig-paths": "^3.9.0",
+		"typescript": "^4.3.2"
 	},
 	"scripts": {
 		"start": "node build/index.js",
 		"compile": "tsc",
+		"ts-node": "./node_modules/.bin/ts-node -r tsconfig-paths/register",
 		"test": "jest",
 		"watch": "tsc-watch --onSuccess \"npm start\"",
 		"prepare": "husky install",

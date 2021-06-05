@@ -5,7 +5,7 @@ const dir = 'top/top-front'
 const cmd = `
 cd top
 cd top-front
-~/tdd-create-app-env/node_modules/.bin/ts-node ~/tdd-create-app-env/src/createEnvScripts/CreateDistSrcBuild.ts
+npm run ts-node ../../src/createEnvScripts/CreateDistSrcBuild.ts
 `
 
 const src = 'src'

@@ -5,6 +5,9 @@ o 1.TopDir ok
 o 2.TopDirのts-config.json作成 ok
 o 3.backDir frontDirの作成 ok
 
+------------------------------back and front--------------------------------
+o 1.dist src build ディレクトリの作成
+
 -----------------------------------------------------front react ------------------
 4f.yarn init -y -> package.json生成
 5f.yarn add --save-dev typescript　→　typescriptの構築
@@ -14,7 +17,7 @@ o 3.backDir frontDirの作成 ok
 o 9f.webpack.config.jsの作成（自作） ok
 10f.yarn install react react-dom -> reactのインストール
 11f.yarn install -D @types/react @types/react-dom
-12f.src/index.tsxの作成　→　react,react-domをインポートしてレンダー
+o 12f.src/index.tsxの作成　→　react,react-domをインポートしてレンダー
 13f.npx webpack -> distにビルド（distは元々作成する必要あり？）
 14f.yarn install -D html-webpack-plugin -> distにビルドされたものをHTMLで確認できるようにするため.htmlを指定するだけで，ビルド生成先のフォルダにHTMLファイルを作成してくれる
 o 15f.src/index.htmlにテンプレートとなるHtmlを用意　（自作）
@@ -23,6 +26,40 @@ o 16f.webpack.config.jsの中を編集　→　ビルドのコマンド（13を�
 18f.yarn install -D css-loader style-loader file-loader -> 静的ファイルのバンドル
 o 19f.webpack.config.jsの中を編集　ok
 
+
+-----------------------------------------back------------------------------------
+touch build/index.js
+argv=`pwd`
+git init
+yarn init -y
+# node ~/my_command/createEnvJSScripts/package/createInitPackage.js ${argv} ${1}
+yarn add --save-dev  typescript
+yarn add --save-dev  tsc-watch
+yarn add @types/node ts-node tsconfig-paths   package.json ni register
+yarn add -D jest 
+yarn add -D @types/jest ts-jest 
+yarn add @types/express 
+yarn add express 
+node ~/my_command/createEnvJSScripts/jest/jestConfig.js ${argv} ${1}
+node ~/my_command/createEnvJSScripts/change.js ${argv}
+create-eslint-prettier-back
+cd ..
+node ~/my_command/createEnvJSScripts/git/createGitIgnore.js ${1}
+echo "{
+  \"compilerOptions\": {
+    \"outDir\": \"./dist\",
+    \"target\": \"ES2015\",
+    \"moduleResolution\": \"node\",
+    \"module\": \"commonjs\",
+    \"strict\": true,
+    \"baseUrl\":\"src\"
+  },
+  \"include\": [
+    \"./src/**/*\"
+  ],
+  \"exclude\": [\"./node_modules\"]
+}" > tsconfig.json
+cd ../
 -----------------------------------------prettier eslint husky----------------------------
 1p-e.yarn add -D husky eslint lint-staged prettier eslint-config-prettier eslint-plugin-prettier　-> eslint prettierを合わせるために必要なものやハスキーをインストール
 2p-e.yarn add -D @typescript-eslint/parser @typescript-eslint/eslint-plugin　eslint-plugin-react
@@ -45,3 +82,8 @@ o 3j.webpack.config.jsにresolve蘭を追加 ok
 --------------------------------------------storybook--------------------------------------------------
 1s.npx -p @storybook/cli sb init
 2. .storybook/main.jsを作成．中身も自作
+
+
+-----------------------------------------git----------------
+git init
+touch .gitIgnore

@@ -1,4 +1,4 @@
-import {DirectoryMaker} from "../model/DirectoryMaker"
+import {DirectoryMaker} from "model/DirectoryMaker"
 
 const makeDirectorys = ["src","build","dist"]
 export const createDistSrcBuild = () => {

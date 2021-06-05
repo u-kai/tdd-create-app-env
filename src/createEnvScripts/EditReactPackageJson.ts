@@ -3,9 +3,10 @@ const changeKeys = ["scripts","lint-staged","prettier"]
 const scripts = {
     "start": "webpack-dev-server --open",
     "compile": "tsc",
+    "test": "jest",
     "prepare": "husky install",
-    "lint-fix": "eslint --fix './src/**/*.{js,ts,tsx}' && prettier --write './src/**/*.{js,ts,tsx}'",
-    "lint-staged":"lint-staged"
+    "lint-staged": "lint-staged",
+    "lint-fix": "eslint --fix './src/**/*.{js,ts,tsx}' && prettier --write './src/**/*.{js,ts,tsx}'"
 }
 const lintStaged = {
     "src/**/*.{js,ts,tsx}": [
