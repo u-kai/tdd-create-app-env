@@ -7,7 +7,7 @@ export class FileMaker {
         this.filePath = filePath
         this.fileContents = fileContents
     }
-    writeFile = () => {
+    writeFile = ():void => {
         fs.writeFileSync(this.filePath, this.fileContents, 'utf-8')
     }
 }

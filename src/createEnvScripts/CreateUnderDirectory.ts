@@ -6,7 +6,7 @@ export class CreateUnderDirectory {
     constructor(topDirPath: string, underDirNName: string) {
         this.underDirPath = path.resolve(topDirPath, underDirNName)
     }
-    mkdir = () => {
+    mkdir = ():void => {
         const directoryMaker = new DirectoryMaker(this.underDirPath)
         directoryMaker.mkdir()
     }

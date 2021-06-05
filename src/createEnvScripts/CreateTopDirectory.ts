@@ -6,7 +6,7 @@ export class CreateTopDirectory {
     constructor(dirPath: string) {
         this.dirPath = dirPath
     }
-    mkdir = () => {
+    mkdir = ():void => {
         const directoryMaker = new DirectoryMaker(this.dirPath)
         directoryMaker.mkdir()
     }

@@ -8,7 +8,7 @@ export class JsonFileMaker extends FileMaker {
         super(filePath, '')
         this.objectData = objectData
     }
-    writeFile = () => {
+    writeFile = ():void => {
         fs.writeFileSync(this.filePath, JSON.stringify(this.objectData, null, '\t'))
     }
 }

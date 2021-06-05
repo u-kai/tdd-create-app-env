@@ -9,9 +9,7 @@ topMkdir.mkdir()
 
 const packageJson = 'package.json'
 const topPackageJsonPath = path.resolve(topDirectory, packageJson)
-const topPackageJsonData = {
-    exclude: ['.'],
-}
+
 const topPackageJsonMaker = new FileMaker(topPackageJsonPath, '')
 topPackageJsonMaker.writeFile()
 

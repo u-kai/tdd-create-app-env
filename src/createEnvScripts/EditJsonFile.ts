@@ -10,12 +10,12 @@ export class EditJsonFile{
         this.changeKey = changeKey
         this.changeData = changeData
     }
-    readFile = () => {
+    readFile = ():ObjectType => {
         return JSON.parse(fs.readFileSync(this.filePath,"utf-8"))
     }
 
-    edit = () => {
-        let fileData:ObjectType = this.readFile()
+    edit = ():void => {
+        const fileData:ObjectType = this.readFile()
         fileData[this.changeKey] = this.changeData
         fs.writeFileSync(this.filePath,JSON.stringify(fileData,null,"\t"))
     }

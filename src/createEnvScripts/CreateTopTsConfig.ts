@@ -10,7 +10,7 @@ export class CreateTopTsConfig {
             exclude: ['.'],
         }
     }
-    createFile = () => {
+    createFile = ():void => {
         const witer = new JsonFileMaker(this.filePath, this.fileData)
         witer.writeFile()
     }
