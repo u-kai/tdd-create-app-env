@@ -10,4 +10,11 @@ export class Installer{
         })
         return cmd.substr(0,cmd.length-1)
     }
+    returnDCmd = ():string => {
+        let cmd = ""
+        this.packageNames.map((packageName)=>{
+            cmd += `yarn add -D ${packageName}\n`
+        })
+        return cmd.substr(0,cmd.length-1)
+    }
 }
