@@ -1,7 +1,7 @@
-import { CompareFileTest } from '../model/CompareFileTest'
+import { CompareJsonFileTest } from '../model/CompareJsonFileTest'
 
 const purposeFileName = 'topTs-config.json'
 const testFileName = 'ts-config.json'
 
-const compareFileTest = new CompareFileTest(purposeFileName, testFileName)
-compareFileTest.test()
+const CompareJsonFileTest = new CompareJsonFileTest(purposeFileName, testFileName)
+CompareJsonFileTest.test()

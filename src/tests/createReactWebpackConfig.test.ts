@@ -1,12 +1,12 @@
 import {CreateReactWebpackConfig} from "../createEnvScripts/CreateReactWebpackConfig"
-import {CompareFileTest} from "../tests/model/CompareFileTest"
+import {CompareJsonFileTest} from "../tests/model/CompareJsonFileTest"
 
-const filePath = "src/test/testFiles/reactWebpack.config.js"
+const filePath = "src/tests/testFiles/reactWebpack.config.js"
 const createReactWebpackConfig = new CreateReactWebpackConfig(filePath)
-createReactWebpackConfig.createFile()
+createReactWebpackConfig.writeFile()
 
 
 const testFileName = "reactWebpack.config.js"
 const purposeFileName = "webpack.config.js"
-const compareFileTest = new CompareFileTest(purposeFileName,testFileName)
-compareFileTest.test()
+const compareJsonFileTest = new CompareJsonFileTest(purposeFileName,testFileName)
+compareJsonFileTest.test()

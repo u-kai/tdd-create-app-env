@@ -1,7 +1,7 @@
 import { CompareFile } from './CompareFile'
 import * as path from 'path'
 
-export class CompareFileTest {
+export class CompareJsonFileTest {
     topPath: string
     purposeFilePath: string
     testFilePath: string
