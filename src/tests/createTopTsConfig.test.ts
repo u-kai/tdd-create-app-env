@@ -2,8 +2,8 @@ import * as fs from 'fs'
 import { CreateTopTsConfig } from '../createEnvScripts/CreateTopTsConfig'
 import * as path from 'path'
 
-const purposeFilePath = path.resolve('src/tests/purposeFiles/topTs-config.json')
-const topTsConfigPath = path.resolve('src/tests/testFiles/ts-config.json')
+const purposeFilePath = path.resolve('src/tests/purposeFiles')
+const topTsConfigPath = path.resolve('src/tests/testFiles')
 
 const createTopTsConfig = new CreateTopTsConfig(topTsConfigPath)
 createTopTsConfig.createFile()

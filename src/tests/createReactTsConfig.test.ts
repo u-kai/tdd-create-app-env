@@ -1,12 +1,12 @@
 import { CompareJsonFileTest } from './model/CompareJsonFileTest'
-import { CreateReactTSConfig } from '../createEnvScripts/CreateReactTSConfig'
+import { CreateReactTsConfig } from '../createEnvScripts/CreateReactTSConfig'
 
-const filePath = 'src/tests/testFiles/reactTs-config.json'
-const createReactTsConfig = new CreateReactTSConfig(filePath)
+const filePath = 'src/tests/testFiles'
+const createReactTsConfig = new CreateReactTsConfig(filePath)
 createReactTsConfig.createFile()
 
-const purposeFileName = 'reactTs-config.json'
-const testFileName = 'reactTs-config.json'
+const purposeFileName = 'ts-config.json'
+const testFileName = 'ts-config.json'
 
 const compareJsonFileTest = new CompareJsonFileTest(purposeFileName, testFileName)
 compareJsonFileTest.test()

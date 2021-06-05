@@ -1,6 +1,6 @@
 import { CreateTopTsConfig } from '../createEnvScripts/createTopTsConfig'
 
-export class CreateReactTSConfig extends CreateTopTsConfig {
+export class CreateReactTsConfig extends CreateTopTsConfig {
     constructor(filePath: string) {
         super(filePath)
         this.fileData = {
