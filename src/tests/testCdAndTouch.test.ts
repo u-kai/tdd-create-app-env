@@ -1,17 +1,18 @@
 import * as fs from 'fs'
 import * as path from 'path'
 import { execSync } from 'child_process'
-const dir = 'top'
+const dir = 'top/top-front'
 const cmd = `
 cd top
-ls
+cd top-front
+~/tdd-create-app-env/node_modules/.bin/ts-node ~/tdd-create-app-env/src/createEnvScripts/CreateDistSrcBuild.ts
 `
 
-const node = 'node_modules'
-const modulePath = path.resolve(dir, node)
+const src = 'src'
+const modulePath = path.resolve(dir, src)
 
 const stdout = execSync(cmd)
 console.log(stdout.toString())
-it('cd -> npm install ', () => {
+it('cd -> mkdris ', () => {
     expect(fs.existsSync(modulePath)).toEqual(true)
 })

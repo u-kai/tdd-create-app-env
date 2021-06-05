@@ -10,7 +10,6 @@ export class DirectoryMaker {
     }
     mkdir = ():void => {
         if (!this.isExist()) {
-            console.log('directoryMaker', this.directoryName)
             fs.mkdirSync(this.directoryName)
         }
     }

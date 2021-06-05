@@ -3,8 +3,7 @@ import {FileMaker} from "../model/FileMaker"
 export class CreateReactEslintrc extends FileMaker{
     constructor(filePath:string){
         super(filePath,"")
-        this.fileContents = `
-module.exports = {
+        this.fileContents = `module.exports = {
     env: {
     browser: true,
     es6: true
