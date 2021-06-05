@@ -1,0 +1,25 @@
+{
+	"name": "top-react",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"scripts": {
+		"start": "webpack-dev-server --open",
+		"compile": "tsc",
+		"test": "jest",
+		"prepare": "husky install",
+		"lint-staged": "lint-staged",
+		"lint-fix": "eslint --fix './src/**/*.{js,ts,tsx}' && prettier --write './src/**/*.{js,ts,tsx}'"
+	},
+	"lint-staged": {
+		"src/**/*.{js,ts,tsx}": [
+			"npm run lint-fix"
+		]
+	},
+	"prettier": {
+		"printWidth": 120,
+		"semi": false,
+		"singleQuote": true,
+		"tabWidth": 4
+	}
+}

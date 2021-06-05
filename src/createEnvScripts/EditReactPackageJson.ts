@@ -1,4 +1,5 @@
 import { EditJsonFile } from "../createEnvScripts/EditJsonFile"
+// import {EditJsonFileDelegate} from "interfaces/EditJson"
 const changeKeys = ["scripts","lint-staged","prettier"]
 const scripts = {
     "start": "webpack-dev-server --open",

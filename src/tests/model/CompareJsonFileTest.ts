@@ -5,10 +5,15 @@ export class CompareJsonFileTest {
     topPath: string
     purposeFilePath: string
     testFilePath: string
-    constructor(purposeFileName: string, testFileName: string) {
-        this.topPath = 'src/tests'
-        this.purposeFilePath = path.resolve(this.topPath, 'purposeFiles', purposeFileName)
-        this.testFilePath = path.resolve(this.topPath, 'testFiles', testFileName)
+    constructor(purposeFileName: string, testFileName: string, topPath?:string) {
+        if(topPath){
+            this.topPath = topPath
+            this.testFilePath = path.resolve(this.topPath,testFileName)
+        }else{
+            this.topPath = 'src/tests'
+            this.testFilePath = path.resolve(this.topPath, 'testFiles', testFileName)
+        }
+        this.purposeFilePath = path.resolve('src/tests', 'purposeFiles', purposeFileName)
     }
     test = () => {
         const compareFile = this.factoryCompareFile()
