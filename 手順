@@ -8,7 +8,7 @@
 -----------------------------------------------------front react ------------------
 4f.yarn init -y -> package.json生成
 5f.yarn add --save-dev typescript　→　typescriptの構築
-6f.ts-configの作成　→ コマンドでも可能だが，バージョン等の情報はないため，自作で設定ファイルを作成した方が良さそう
+6f.ts-configの作成　→ コマンドでも可能だが，バージョン等の情報はないため，自作で設定ファイルを作成した方が良さそう -> ok
 7f.yarn install -D webpack webpack-cil  -> webpackのインストール
 8f.yarn install -D ts-loader
 9f.webpack.config.jsの作成（自作）
