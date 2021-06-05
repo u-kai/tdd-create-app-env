@@ -9,9 +9,9 @@ o 3.backDir frontDirの作成 ok
 o 1.dist src build ディレクトリの作成
 
 -----------------------------------------------------front react ------------------
-4f.yarn init -y -> package.json生成
-5f.yarn add --save-dev typescript　→　typescriptの構築
-6f.ts-configの作成　→ コマンドでも可能だが，バージョン等の情報はないため，自作で設定ファイルを作成した方が良さそう -> ok
+o 4f.yarn init -y -> package.json生成
+o 5f.yarn add --save-dev typescript　→　typescriptの構築
+o 6f.ts-configの作成　→ コマンドでも可能だが，バージョン等の情報はないため，自作で設定ファイルを作成した方が良さそう -> ok
 o 7f.yarn install -D webpack webpack-cil  -> webpackのインストール
 o 8f.yarn install -D ts-loader
 o 9f.webpack.config.jsの作成（自作） ok
@@ -30,14 +30,14 @@ o 19f.webpack.config.jsの中を編集　ok
 -----------------------------------------back------------------------------------
 touch build/index.js
 argv=`pwd`
-git init
-yarn init -y
+o git init
+o yarn init -y
 # node ~/my_command/createEnvJSScripts/package/createInitPackage.js ${argv} ${1}
-yarn add --save-dev  typescript
-yarn add --save-dev  tsc-watch
-yarn add @types/node ts-node tsconfig-paths   package.json ni register
-yarn add -D jest 
-yarn add -D @types/jest ts-jest 
+o yarn add --save-dev  typescript
+o yarn add --save-dev  tsc-watch
+o yarn add @types/node ts-node tsconfig-paths   package.json ni register
+o yarn add -D jest 
+o yarn add -D @types/jest ts-jest 
 yarn add @types/express 
 yarn add express 
 node ~/my_command/createEnvJSScripts/jest/jestConfig.js ${argv} ${1}
@@ -64,8 +64,8 @@ cd ../
 o 1p-e.yarn add -D husky eslint lint-staged prettier eslint-config-prettier eslint-plugin-prettier　-> eslint prettierを合わせるために必要なものやハスキーをインストール
 o 2p-e.yarn add -D @typescript-eslint/parser @typescript-eslint/eslint-plugin　eslint-plugin-react
 o 3p-e.package.jsonにlint-stagedの項目を追加 ----ok
-4p-e.npx husky install -> huskyの準備
-5p-e.npx husky add .husky/pre-commit "yarn lint-staged"
+o 4p-e.npx husky install -> huskyの準備
+o 5p-e.npx husky add .husky/pre-commit "yarn lint-staged"
 o 6p-e.package.jsonのscriptsでlint-fix，lint-stagedできるように編集(なるだけまとめたい) ok
 o 7p-e..eslintrc.jsをReact用に作成
 o 8p-e.package.jsonにprettier蘭を追加  ----------ok
