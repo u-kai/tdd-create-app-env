@@ -1,5 +1,5 @@
 import {FileMaker} from "model/FileMaker"
-export const createSrcIndex = () => {
+export const createSrcIndexHtml = () => {
     const fileContents = `<!DOCTYPE html>
 <html>
 <head>

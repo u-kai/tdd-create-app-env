@@ -17,7 +17,7 @@ o 9f.webpack.config.jsの作成（自作） ok
 12f.src/index.tsxの作成　→　react,react-domをインポートしてレンダー
 13f.npx webpack -> distにビルド（distは元々作成する必要あり？）
 14f.yarn install -D html-webpack-plugin -> distにビルドされたものをHTMLで確認できるようにするため.htmlを指定するだけで，ビルド生成先のフォルダにHTMLファイルを作成してくれる
-15f.src/index.htmlにテンプレートとなるHtmlを用意　（自作）
+o 15f.src/index.htmlにテンプレートとなるHtmlを用意　（自作）
 o 16f.webpack.config.jsの中を編集　→　ビルドのコマンド（13をしなくていいなら，一括でこのフェーズでWebpack.configは作った方が良さそう
 17f.yarn install -D webpack-dev-server live reloading 機能がついている npx webpack-dev-server で起動するのでこの設定をpackage.jsonのscripts蘭に記入する？
 18f.yarn install -D css-loader style-loader file-loader -> 静的ファイルのバンドル

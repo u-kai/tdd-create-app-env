@@ -1,7 +1,7 @@
-import {createSrcIndex} from "createEnvScripts/CreateSrcIndex"
+import {createSrcIndexTsx} from "createEnvScripts/CreateSrcIndexTsx"
 import {CompareFileTest} from "./model/CompareFileTest"
 
-createSrcIndex()
-const fileName = "index.html"
+createSrcIndexTsx()
+const fileName = "index.tsx"
 const compareFileTest = new CompareFileTest(fileName,fileName)
 compareFileTest.test()
