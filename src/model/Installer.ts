@@ -1,3 +1,4 @@
+import {exeCommand} from "functions/ExeCommand"
 export class Installer{
     packageNames:string[]
     constructor(packageNames:string[]){
@@ -16,5 +17,12 @@ export class Installer{
             cmd += `yarn add -D ${packageName}\n`
         })
         return cmd.substr(0,cmd.length-1)
+    }
+    exeInstall = (d?:"D"):void => {
+        if(d){
+            exeCommand(this.returnDCmd())
+            return
+        }
+        exeCommand(this.returnCmd())
     }
 }
