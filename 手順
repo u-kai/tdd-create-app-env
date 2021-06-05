@@ -1,9 +1,9 @@
 環境構築の本を参考に手順を簡単に記載
 大切なところは，nodeでどこまで環境が構築され，どこまで自分で新規作成や編集を行わなければいけないのか
 
-1.TopDir ok
-2.TopDirのts-config.json作成 ok
-3.backDir frontDirの作成 ok
+o 1.TopDir ok
+o 2.TopDirのts-config.json作成 ok
+o 3.backDir frontDirの作成 ok
 
 -----------------------------------------------------front react ------------------
 4f.yarn init -y -> package.json生成
@@ -11,32 +11,32 @@
 6f.ts-configの作成　→ コマンドでも可能だが，バージョン等の情報はないため，自作で設定ファイルを作成した方が良さそう -> ok
 7f.yarn install -D webpack webpack-cil  -> webpackのインストール
 8f.yarn install -D ts-loader
-9f.webpack.config.jsの作成（自作） ok
+o 9f.webpack.config.jsの作成（自作） ok
 10f.yarn install react react-dom -> reactのインストール
 11f.yarn install -D @types/react @types/react-dom
 12f.src/index.tsxの作成　→　react,react-domをインポートしてレンダー
 13f.npx webpack -> distにビルド（distは元々作成する必要あり？）
 14f.yarn install -D html-webpack-plugin -> distにビルドされたものをHTMLで確認できるようにするため.htmlを指定するだけで，ビルド生成先のフォルダにHTMLファイルを作成してくれる
 15f.src/index.htmlにテンプレートとなるHtmlを用意　（自作）
-16f.webpack.config.jsの中を編集　→　ビルドのコマンド（13をしなくていいなら，一括でこのフェーズでWebpack.configは作った方が良さそう
+o 16f.webpack.config.jsの中を編集　→　ビルドのコマンド（13をしなくていいなら，一括でこのフェーズでWebpack.configは作った方が良さそう
 17f.yarn install -D webpack-dev-server live reloading 機能がついている npx webpack-dev-server で起動するのでこの設定をpackage.jsonのscripts蘭に記入する？
 18f.yarn install -D css-loader style-loader file-loader -> 静的ファイルのバンドル
-19f.webpack.config.jsの中を編集　ok
+o 19f.webpack.config.jsの中を編集　ok
 
 -----------------------------------------prettier eslint husky----------------------------
 1p-e.yarn add -D husky eslint lint-staged prettier eslint-config-prettier eslint-plugin-prettier　-> eslint prettierを合わせるために必要なものやハスキーをインストール
 2p-e.yarn add -D @typescript-eslint/parser @typescript-eslint/eslint-plugin　eslint-plugin-react
-3p-e.package.jsonにlint-stagedの項目を追加 ----ok
+o 3p-e.package.jsonにlint-stagedの項目を追加 ----ok
 4p-e.npx husky install -> huskyの準備
 5p-e.npx husky add .husky/pre-commit "yarn lint-staged"
-ok 6p-e.package.jsonのscriptsでlint-fix，lint-stagedできるように編集(なるだけまとめたい) ok
-7p-e..eslintrc.jsをReact用に作成
-8p-e.package.jsonにprettier蘭を追加  ----------ok
+o 6p-e.package.jsonのscriptsでlint-fix，lint-stagedできるように編集(なるだけまとめたい) ok
+o 7p-e..eslintrc.jsをReact用に作成
+o 8p-e.package.jsonにprettier蘭を追加  ----------ok
 
 ------------------------------------------------jest--------------------------------------
 1j.yarn install -D jest @types/jest ts-jest
-2j.jest.config.jsの作成
-3j.webpack.config.jsにresolve蘭を追加 ok
+o 2j.jest.config.jsの作成
+o 3j.webpack.config.jsにresolve蘭を追加 ok
 4j.__mocks__ディレクトリの追加
 
 ----------------------------------------------jest react ---------------------------------
