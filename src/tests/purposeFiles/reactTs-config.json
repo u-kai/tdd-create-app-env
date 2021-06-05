@@ -1,0 +1,9 @@
+{
+    "outDir": "./dist",
+    "target": "ES2015",
+    "moduleResolution": "commonjs",
+    "module": "esnext",
+    "strict": true,
+    "baseUrl": "src",
+    "jsx":"react"
+}

@@ -1,9 +1,9 @@
 環境構築の本を参考に手順を簡単に記載
 大切なところは，nodeでどこまで環境が構築され，どこまで自分で新規作成や編集を行わなければいけないのか
 
-1.TopDir
-2.TopDirのts-config.json作成
-3.backDir frontDirの作成
+1.TopDir ok
+2.TopDirのts-config.json作成 ok
+3.backDir frontDirの作成 ok
 
 -----------------------------------------------------front react ------------------
 4f.yarn init -y -> package.json生成
