@@ -11,7 +11,7 @@
 6f.ts-configの作成　→ コマンドでも可能だが，バージョン等の情報はないため，自作で設定ファイルを作成した方が良さそう -> ok
 7f.yarn install -D webpack webpack-cil  -> webpackのインストール
 8f.yarn install -D ts-loader
-9f.webpack.config.jsの作成（自作）
+9f.webpack.config.jsの作成（自作） ok
 10f.yarn install react react-dom -> reactのインストール
 11f.yarn install -D @types/react @types/react-dom
 12f.src/index.tsxの作成　→　react,react-domをインポートしてレンダー
@@ -21,7 +21,7 @@
 16f.webpack.config.jsの中を編集　→　ビルドのコマンド（13をしなくていいなら，一括でこのフェーズでWebpack.configは作った方が良さそう
 17f.yarn install -D webpack-dev-server live reloading 機能がついている npx webpack-dev-server で起動するのでこの設定をpackage.jsonのscripts蘭に記入する？
 18f.yarn install -D css-loader style-loader file-loader -> 静的ファイルのバンドル
-19f.webpack.config.jsの中を編集
+19f.webpack.config.jsの中を編集　ok
 
 -----------------------------------------prettier eslint husky----------------------------
 1p-e.yarn add -D husky eslint lint-staged prettier eslint-config-prettier eslint-plugin-prettier　-> eslint prettierを合わせるために必要なものやハスキーをインストール
@@ -36,7 +36,7 @@
 ------------------------------------------------jest--------------------------------------
 1j.yarn install -D jest @types/jest ts-jest
 2j.jest.config.jsの作成
-3j.webpack.config.jsにresolve蘭を追加
+3j.webpack.config.jsにresolve蘭を追加 ok
 4j.__mocks__ディレクトリの追加
 
 ----------------------------------------------jest react ---------------------------------
