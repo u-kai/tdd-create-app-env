@@ -1,6 +1,6 @@
 import * as fs from 'fs'
 
-export class CompareFile {
+export class CompareJsonFile {
     private purposeFilePath: string
     private testFilePath: string
 

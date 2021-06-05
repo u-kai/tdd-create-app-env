@@ -1,4 +1,4 @@
-import { CompareFile } from './CompareFile'
+import { CompareJsonFile } from './CompareJsonFile'
 import * as path from 'path'
 
 export class CompareJsonFileTest {
@@ -21,6 +21,6 @@ export class CompareJsonFileTest {
         })
     }
     factoryCompareFile = () => {
-        return new CompareFile(this.purposeFilePath, this.testFilePath)
+        return new CompareJsonFile(this.purposeFilePath, this.testFilePath)
     }
 }
