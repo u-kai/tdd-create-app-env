@@ -1,8 +1,8 @@
 import * as fs from 'fs'
 
 export class CompareJsonFile {
-    private purposeFilePath: string
-    private testFilePath: string
+    purposeFilePath: string
+    testFilePath: string
 
     constructor(purposeFilePath: string, testFilePath: string) {
         this.purposeFilePath = purposeFilePath
