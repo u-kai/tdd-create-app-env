@@ -3,8 +3,8 @@ import {ObjectType} from "../types/ObjectsType"
 import {KeyValue} from "../types/KeyValue"
 export class EditJsonFile{
     filePath:string
-    changeKey:string
-    changeData:KeyValue
+    private changeKey:string
+    private changeData:KeyValue
     constructor(filePath:string,changeKey:string,changeData:KeyValue){
         this.filePath = filePath
         this.changeKey = changeKey

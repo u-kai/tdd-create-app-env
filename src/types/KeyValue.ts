@@ -1,1 +1,1 @@
-export type KeyValue = {[key:string]:string}
+export type KeyValue = {[key:string]:string | string[] | boolean | boolean[] | number | number[] | null }

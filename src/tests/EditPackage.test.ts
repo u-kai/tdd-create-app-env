@@ -3,11 +3,11 @@ import { EditJsonFile } from "../createEnvScripts/EditJsonFile"
 const filePath = 'src/tests/testFiles/reactPackage.json'
 const changeKey = "scripts"
 const changeData = {
-    "start": "node build/index.js",
+    "start": "webpack-dev-server --open",
     "compile": "tsc",
-    "watch": "tsc-watch --onSuccess \"npm start\"",
     "prepare": "husky install",
-    "lint-fix": "eslint --fix './src/**/*.{js,ts,tsx}' && prettier --write './src/**/*.{js,ts,tsx}'"
+    "lint-fix": "eslint --fix './src/**/*.{js,ts,tsx}' && prettier --write './src/**/*.{js,ts,tsx}'",
+    "lint-staged":"lint-staged"
 }
 const editPackage = new EditJsonFile(filePath,changeKey,changeData)
 editPackage.edit()
