@@ -26,12 +26,12 @@
 -----------------------------------------prettier eslint husky----------------------------
 1p-e.yarn add -D husky eslint lint-staged prettier eslint-config-prettier eslint-plugin-prettier　-> eslint prettierを合わせるために必要なものやハスキーをインストール
 2p-e.yarn add -D @typescript-eslint/parser @typescript-eslint/eslint-plugin　eslint-plugin-react
-3p-e.package.jsonにlint-stagedの項目を追加
+3p-e.package.jsonにlint-stagedの項目を追加 ----ok
 4p-e.npx husky install -> huskyの準備
 5p-e.npx husky add .husky/pre-commit "yarn lint-staged"
-6p-e.package.jsonのscriptsでlint-fix，lint-stagedできるように編集(なるだけまとめたい)
+ok 6p-e.package.jsonのscriptsでlint-fix，lint-stagedできるように編集(なるだけまとめたい) ok
 7p-e..eslintrc.jsをReact用に作成
-8p-e.package.jsonにprettier蘭を追加
+8p-e.package.jsonにprettier蘭を追加  ----------ok
 
 ------------------------------------------------jest--------------------------------------
 1j.yarn install -D jest @types/jest ts-jest
