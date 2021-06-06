@@ -1,4 +1,4 @@
-import {exeCommand} from "functions/ExeCommand"
+import {exeCommand} from "../functions/ExeCommand"
 export class Installer{
     packageNames:string[]
     constructor(packageNames:string[]){

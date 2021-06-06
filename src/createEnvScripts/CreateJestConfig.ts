@@ -1,4 +1,4 @@
-import {FileMaker} from "model/FileMaker"
+import {FileMaker} from "../model/FileMaker"
 import * as path from "path"
 export class CreateJestConfig extends FileMaker{
     constructor(filePath:string){

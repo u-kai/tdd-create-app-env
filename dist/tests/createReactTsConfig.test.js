@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const CompareJsonFileTest_1 = require("./model/CompareJsonFileTest");
+const CreateReactTSConfig_1 = require("../createEnvScripts/CreateReactTSConfig");
+const filePath = 'src/tests/testFiles';
+const createReactTsConfig = new CreateReactTSConfig_1.CreateReactTsConfig(filePath);
+createReactTsConfig.createFile();
+const purposeFileName = 'ts-config.json';
+const testFileName = 'ts-config.json';
+const compareJsonFileTest = new CompareJsonFileTest_1.CompareJsonFileTest(purposeFileName, testFileName);
+compareJsonFileTest.test();

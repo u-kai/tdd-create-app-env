@@ -1,4 +1,4 @@
-import {CreateTopTsConfig} from "createEnvScripts/CreateTopTsConfig"
+import {CreateTopTsConfig} from "../createEnvScripts/CreateTopTsConfig"
 
 export class CreateBackTsConfig extends CreateTopTsConfig{
     constructor(filePath:string){

@@ -1,5 +1,5 @@
-import {exeCommand} from "functions/ExeCommand"
-import {FileMaker} from "model/FileMaker"
+import {exeCommand} from "../functions/ExeCommand"
+import {FileMaker} from "../model/FileMaker"
 export class Giter{
     parentPath:string
     gitIgnore:string

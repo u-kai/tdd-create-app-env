@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const PackageJsonOperater_1 = require("createEnvScripts/PackageJsonOperater");
+const CompareJsonFileTest_1 = require("./model/CompareJsonFileTest");
+const path = "top/top-react";
+const packageJsonOperater = new PackageJsonOperater_1.PackageJsonOperater(path);
+packageJsonOperater.init();
+packageJsonOperater.editToReact();
+const compareJsonFileTest = new CompareJsonFileTest_1.CompareJsonFileTest("package.json", "package.json", path);
+compareJsonFileTest.test();

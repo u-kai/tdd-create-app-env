@@ -1,4 +1,4 @@
-import {DirectoryMaker} from "model/DirectoryMaker"
+import {DirectoryMaker} from "../model/DirectoryMaker"
 import * as path from "path"
 export class CreateDistSrcBuild{
     private topPath:string

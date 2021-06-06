@@ -1,5 +1,5 @@
-import {Installer} from "model/Installer"
-import {exeCommand} from "functions/ExeCommand"
+import {Installer} from "../model/Installer"
+import {exeCommand} from "../functions/ExeCommand"
 export class CdAndInstall extends Installer{
     private cdPath:string
     constructor(cdPath:string,packages:string[]){

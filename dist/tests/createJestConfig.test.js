@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const CreateJestConfig_1 = require("createEnvScripts/CreateJestConfig");
+const CompareFileTest_1 = require("./model/CompareFileTest");
+const filePath = "src/tests/testFiles/jest.config.ts";
+const createJestConfig = new CreateJestConfig_1.CreateJestConfig(filePath);
+createJestConfig.writeFile();
+const fileName = "jest.config.ts";
+const compareFileTest = new CompareFileTest_1.CompareFileTest(fileName, fileName);
+compareFileTest.test();
