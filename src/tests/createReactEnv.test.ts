@@ -12,7 +12,8 @@ const paths = [
     "node_modules",
     "node_modules/react",
     "node_modules/react-dom",
-    "node_modules/@styled-components"]
+    "node_modules/styled-components",
+    "node_modules/typescript"]
 //     ".eslintrc.js",
 //     ".git",
 //     ".gitignore",

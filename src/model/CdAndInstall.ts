@@ -6,11 +6,11 @@ export class CdAndInstall extends Installer{
         super(packages)
         this.cdPath = cdPath
     }
-    private returnCmdWithCd = ():string =>{
+    returnCmdWithCd = ():string =>{
         return `cd ${this.cdPath}\n${this.returnCmd()}`
     }
 
-    private returnDCmdWithCd = ():string => {
+    returnDCmdWithCd = ():string => {
         return `cd ${this.cdPath}\n${this.returnDCmd()}`
     }
     exeInstall = (d?:"D"):void => {

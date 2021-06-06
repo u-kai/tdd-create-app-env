@@ -4,6 +4,7 @@ import {CreateDistSrcBuild} from "createEnvScripts/CreateDistSrcBuild"
 import {CreateReactTsConfig} from "createEnvScripts/CreateReactTSConfig"
 import {CdAndInstall} from "model/CdAndInstall"
 import {installReactPakcages, DInstallReactPackages} from "install-packages/InstallReactPackages"
+import {DInstallTypescriptReactPackages} from "install-packages/InstallTypescriptPackages"
 export class CreateReactEnv{
     private topPath:string
     constructor(topPath:string){
@@ -32,11 +33,16 @@ export class CreateReactEnv{
         cdAndInstall.exeInstall()
         cdAndDInastall.exeInstall("D") 
     }
+    installTypescriptPackages = () => {
+        const cdAndDInastall = new CdAndInstall(this.topPath,DInstallTypescriptReactPackages)
+        cdAndDInastall.exeInstall("D")
+    }
     run = ():void =>{
         this.createTopDir()
         this.yarnInit()
         this.createChilderns()
         this.createTsConfig()
         this.installReactPackages()
+        this.installTypescriptPackages()
     }
 }
