@@ -7,6 +7,8 @@ import {installReactPakcages, DInstallReactPackages} from "install-packages/Inst
 import {DInstallTypescriptReactPackages} from "install-packages/InstallTypescriptPackages"
 import {CreateReactWebpackConfig} from "createEnvScripts/CreateReactWebpackConfig"
 import {DInstallWebpackPackages} from "install-packages/InstallWebpackPackages"
+import {CreateSrcIndex} from "createEnvScripts/CreateSrcIndex"
+
 export class CreateReactEnv{
     private topPath:string
     constructor(topPath:string){
@@ -21,31 +23,36 @@ export class CreateReactEnv{
         yarn init -y`
         exeCommand(cmd)
     }
-    createChilderns = () => {
+    createChilderns = ():void => {
         const createDistSrcBuild = new CreateDistSrcBuild(this.topPath)
         createDistSrcBuild.mkdirs()
     }
-    createTsConfig = () => {
+    createTsConfig = ():void => {
         const createReactTsConfig = new CreateReactTsConfig(this.topPath)
         createReactTsConfig.createFile()
     }
-    private installReactPackages = () => {
+    private installReactPackages = ():void => {
         const cdAndInstall = new CdAndInstall(this.topPath,installReactPakcages)
         const cdAndDInastall = new CdAndInstall(this.topPath,DInstallReactPackages)
         cdAndInstall.exeInstall()
         cdAndDInastall.exeInstall("D") 
     }
-    installTypescriptPackages = () => {
+    installTypescriptPackages = ():void => {
         const cdAndDInastall = new CdAndInstall(this.topPath,DInstallTypescriptReactPackages)
         cdAndDInastall.exeInstall("D")
     }
-    createWeppackConfig = () => {
+    createWeppackConfig = ():void => {
         const createReactWebpackConfig = new CreateReactWebpackConfig(this.topPath)
         createReactWebpackConfig.writeFile()
     }
-    installWebpackPackages = () => {
+    installWebpackPackages = ():void => {
         const cdAndDInastall = new CdAndInstall(this.topPath,DInstallWebpackPackages)
         cdAndDInastall.exeInstall()
+    }
+    createSrcIndex = ():void => {
+        const createSrcIndex = new CreateSrcIndex(this.topPath)
+        createSrcIndex.createHtml()
+        createSrcIndex.createTsx()
     }
     run = ():void =>{
         this.createTopDir()
@@ -56,5 +63,6 @@ export class CreateReactEnv{
         this.installTypescriptPackages()
         this.installWebpackPackages()
         this.createWeppackConfig()
+        this.createSrcIndex()
     }
 }
