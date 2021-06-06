@@ -1,8 +1,8 @@
 import {DirectoryMaker} from "../model/DirectoryMaker"
 import * as path from "path"
 export class CreateDistSrcBuild{
-    private topPath:string
-    private makeDirectorys = ["src","build","dist"]
+    topPath:string
+    makeDirectorys = ["src","build","dist"]
     constructor(topPath:string){
         this.topPath = topPath
     }

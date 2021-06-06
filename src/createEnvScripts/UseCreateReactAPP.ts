@@ -6,6 +6,8 @@ import {CdAndInstall} from "../model/CdAndInstall"
 import {ExeHusky} from "../createEnvScripts/ExeHusky"
 import {editReactPackageJson} from "../createEnvScripts/UseCreateReactAppPackageJson"
 import {createEnvFile} from "../createEnvScripts/CreateENVFile"
+import {installCreateReactAppPackages,DInstallCreateReactAppPackages} from "../install-packages/InstallCreateReactAppPackages"
+import {CreateUnderSrc} from "../createEnvScripts/CreateUnderSrc"
 export class UseCreateReactAPP{
     topPath:string
     constructor(topPath:string){
@@ -26,7 +28,7 @@ export class UseCreateReactAPP{
     }
     installEslintETC = () => {
         const cdAndDInastall = new CdAndInstall(this.topPath,DInstallEsLintPrettierHuskyPackagesReact)
-        cdAndDInastall.exeInstall()
+        cdAndDInastall.exeInstall("D")
     }
     editPackage = () => {
         editReactPackageJson(this.topPath)
@@ -38,13 +40,25 @@ export class UseCreateReactAPP{
     createEnvFile = () => {
         createEnvFile(this.topPath)
     }
+    installPackages = ():void => {
+        const cdAndInstall = new CdAndInstall(this.topPath,installCreateReactAppPackages)
+        cdAndInstall.exeInstall()
+        const cdAndDInastall = new CdAndInstall(this.topPath,DInstallCreateReactAppPackages)
+        cdAndDInastall.exeInstall("D")
+    }
+    createUnderSrc = () => {
+        const createUnderSrc = new CreateUnderSrc(this.topPath)
+        createUnderSrc.mkdirs()
+    }
     run = ():void =>{
         this.createReactApp()
+        this.createEnvFile()
         this.git()
         this.createEslintrc()
         this.installEslintETC()
         this.editPackage()
-        this.exeHusky()
-        this.createEnvFile()
+        // this.exeHusky()
+        this.installPackages()
+        this.createUnderSrc()
     }
 }

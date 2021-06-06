@@ -7,8 +7,10 @@ export class ExeHusky{
     }
     exeHusky = ():void => {
         const cmd = `cd ${this.path}
-        npx husky install
-        npx husky add .husky/pre-commit "yarn lint-staged"`
+        npx husky install`
         exeCommand(cmd)
+        const cmd2 = `cd ${this.path}
+        npx husky add .husky/pre-commit "yarn lint-staged"`
+        exeCommand(cmd2)
     }
 }

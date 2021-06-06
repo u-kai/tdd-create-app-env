@@ -17,6 +17,8 @@ const InstallEslintPrettierHuskyPackages_1 = require("../install-packages/Instal
 const CreateJestConfig_1 = require("../createEnvScripts/CreateJestConfig");
 const InstallJestPackages_1 = require("../install-packages/InstallJestPackages");
 const PackageJsonOperater_1 = require("../createEnvScripts/PackageJsonOperater");
+const CreateUnderSrc_1 = require("../createEnvScripts/CreateUnderSrc");
+const CreateENVFile_1 = require("../createEnvScripts/CreateENVFile");
 class CreateReactEnv {
     constructor(topPath) {
         this.createTopDir = () => {
@@ -88,6 +90,13 @@ class CreateReactEnv {
             const editPackage = new PackageJsonOperater_1.PackageJsonOperater(this.topPath);
             editPackage.editToReact();
         };
+        this.createEnvFile = () => {
+            CreateENVFile_1.createEnvFile(this.topPath);
+        };
+        this.createUnderSrc = () => {
+            const createUnderSrc = new CreateUnderSrc_1.CreateUnderSrc(this.topPath);
+            createUnderSrc.mkdirs();
+        };
         this.run = () => {
             this.createTopDir();
             this.yarnInit();
@@ -105,6 +114,8 @@ class CreateReactEnv {
             this.createJestConfing();
             this.installReactJest();
             this.editPacageJson();
+            this.createEnvFile();
+            this.createUnderSrc();
         };
         this.topPath = topPath;
     }

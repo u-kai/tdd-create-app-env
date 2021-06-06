@@ -9,6 +9,8 @@ const CdAndInstall_1 = require("../model/CdAndInstall");
 const ExeHusky_1 = require("../createEnvScripts/ExeHusky");
 const UseCreateReactAppPackageJson_1 = require("../createEnvScripts/UseCreateReactAppPackageJson");
 const CreateENVFile_1 = require("../createEnvScripts/CreateENVFile");
+const InstallCreateReactAppPackages_1 = require("../install-packages/InstallCreateReactAppPackages");
+const CreateUnderSrc_1 = require("../createEnvScripts/CreateUnderSrc");
 class UseCreateReactAPP {
     constructor(topPath) {
         this.createReactApp = () => {
@@ -26,7 +28,7 @@ class UseCreateReactAPP {
         };
         this.installEslintETC = () => {
             const cdAndDInastall = new CdAndInstall_1.CdAndInstall(this.topPath, InstallEslintPrettierHuskyPackages_1.DInstallEsLintPrettierHuskyPackagesReact);
-            cdAndDInastall.exeInstall();
+            cdAndDInastall.exeInstall("D");
         };
         this.editPackage = () => {
             UseCreateReactAppPackageJson_1.editReactPackageJson(this.topPath);
@@ -38,14 +40,26 @@ class UseCreateReactAPP {
         this.createEnvFile = () => {
             CreateENVFile_1.createEnvFile(this.topPath);
         };
+        this.installPackages = () => {
+            const cdAndInstall = new CdAndInstall_1.CdAndInstall(this.topPath, InstallCreateReactAppPackages_1.installCreateReactAppPackages);
+            cdAndInstall.exeInstall();
+            const cdAndDInastall = new CdAndInstall_1.CdAndInstall(this.topPath, InstallCreateReactAppPackages_1.DInstallCreateReactAppPackages);
+            cdAndDInastall.exeInstall("D");
+        };
+        this.createUnderSrc = () => {
+            const createUnderSrc = new CreateUnderSrc_1.CreateUnderSrc(this.topPath);
+            createUnderSrc.mkdirs();
+        };
         this.run = () => {
             this.createReactApp();
+            this.createEnvFile();
             this.git();
             this.createEslintrc();
             this.installEslintETC();
             this.editPackage();
-            this.exeHusky();
-            this.createEnvFile();
+            // this.exeHusky()
+            this.installPackages();
+            this.createUnderSrc();
         };
         this.topPath = topPath;
     }
