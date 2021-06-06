@@ -6,7 +6,7 @@ import {CdAndInstall} from "model/CdAndInstall"
 import {installReactPakcages, DInstallReactPackages} from "install-packages/InstallReactPackages"
 import {DInstallTypescriptReactPackages} from "install-packages/InstallTypescriptPackages"
 import {CreateReactWebpackConfig} from "createEnvScripts/CreateReactWebpackConfig"
-
+import {DInstallWebpackPackages} from "install-packages/InstallWebpackPackages"
 export class CreateReactEnv{
     private topPath:string
     constructor(topPath:string){
@@ -43,6 +43,10 @@ export class CreateReactEnv{
         const createReactWebpackConfig = new CreateReactWebpackConfig(this.topPath)
         createReactWebpackConfig.writeFile()
     }
+    installWebpackPackages = () => {
+        const cdAndDInastall = new CdAndInstall(this.topPath,DInstallWebpackPackages)
+        cdAndDInastall.exeInstall()
+    }
     run = ():void =>{
         this.createTopDir()
         this.yarnInit()
@@ -50,6 +54,7 @@ export class CreateReactEnv{
         this.createTsConfig()
         this.installReactPackages()
         this.installTypescriptPackages()
+        this.installWebpackPackages()
         this.createWeppackConfig()
     }
 }
