@@ -8,9 +8,11 @@ const paths = [
     "src",
     "build",
     "package.json",
-    "ts-config.json"]
-    // "node_modules",]
-//     "ts-config",
+    "ts-config.json",
+    "node_modules",
+    "node_modules/react",
+    "node_modules/react-dom",
+    "node_modules/@styled-components"]
 //     ".eslintrc.js",
 //     ".git",
 //     ".gitignore",
