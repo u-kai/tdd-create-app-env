@@ -9,7 +9,7 @@ import {CreateReactWebpackConfig} from "../createEnvScripts/CreateReactWebpackCo
 import {DInstallWebpackPackages} from "../install-packages/InstallWebpackPackages"
 import {CreateSrcIndex} from "../createEnvScripts/CreateSrcIndex"
 import {Giter} from "../model/Giter"
-import {CreateReactEslintrc} from "../createEnvScripts/CreateReactEslintrc"
+import {CreateEslintrc} from "./CreateEslintrc"
 import {DInstallEsLintPrettierHuskyPackagesReact} from "../install-packages/InstallEslintPrettierHuskyPackages"
 import {CreateJestConfig} from "../createEnvScripts/CreateJestConfig"
 import {DInstallJestPackages,DInstallJestPackagesReact} from "../install-packages/InstallJestPackages"
@@ -71,7 +71,7 @@ export class CreateReactEnv{
         cdAndDInastall.exeInstall()
     }
     createEslintrc = () => {
-        const createExlintrc = new CreateReactEslintrc(this.topPath)
+        const createExlintrc = new CreateEslintrc(this.topPath,"react")
         createExlintrc.writeFile()
     }
     installJest = () => {

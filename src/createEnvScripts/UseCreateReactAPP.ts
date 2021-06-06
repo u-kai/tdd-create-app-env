@@ -1,4 +1,4 @@
-import {CreateReactEslintrc} from "../createEnvScripts/CreateReactEslintrc"
+import {CreateEslintrc} from "./CreateEslintrc"
 import {DInstallEsLintPrettierHuskyPackagesReact} from "../install-packages/InstallEslintPrettierHuskyPackages"
 import {Giter} from "../model/Giter"
 import {exeCommand} from "../functions/ExeCommand"
@@ -23,7 +23,7 @@ export class UseCreateReactAPP{
         giter.createIgnore()
     }
     createEslintrc = ():void => {
-        const createExlintrc = new CreateReactEslintrc(this.topPath)
+        const createExlintrc = new CreateEslintrc(this.topPath,"react")
         createExlintrc.writeFile()
     }
     installEslintETC = () => {

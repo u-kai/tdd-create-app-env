@@ -12,7 +12,7 @@ const CreateReactWebpackConfig_1 = require("../createEnvScripts/CreateReactWebpa
 const InstallWebpackPackages_1 = require("../install-packages/InstallWebpackPackages");
 const CreateSrcIndex_1 = require("../createEnvScripts/CreateSrcIndex");
 const Giter_1 = require("../model/Giter");
-const CreateReactEslintrc_1 = require("../createEnvScripts/CreateReactEslintrc");
+const CreateReactEslintrc_1 = require("../createEnvScripts/CreateEslintrc");
 const InstallEslintPrettierHuskyPackages_1 = require("../install-packages/InstallEslintPrettierHuskyPackages");
 const CreateJestConfig_1 = require("../createEnvScripts/CreateJestConfig");
 const InstallJestPackages_1 = require("../install-packages/InstallJestPackages");
@@ -71,7 +71,7 @@ class CreateReactEnv {
             cdAndDInastall.exeInstall();
         };
         this.createEslintrc = () => {
-            const createExlintrc = new CreateReactEslintrc_1.CreateReactEslintrc(this.topPath);
+            const createExlintrc = new CreateReactEslintrc_1.CreateEslintrc(this.topPath);
             createExlintrc.writeFile();
         };
         this.installJest = () => {

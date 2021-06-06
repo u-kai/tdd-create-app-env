@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CreateReactEslintrc = void 0;
+exports.CreateEslintrc = void 0;
 const FileMaker_1 = require("../model/FileMaker");
 const path = require("path");
-class CreateReactEslintrc extends FileMaker_1.FileMaker {
+class CreateEslintrc extends FileMaker_1.FileMaker {
     constructor(filePath) {
         super(filePath, "");
         this.filePath = path.resolve(filePath, ".eslintrc.js");
@@ -32,4 +32,4 @@ class CreateReactEslintrc extends FileMaker_1.FileMaker {
 }`;
     }
 }
-exports.CreateReactEslintrc = CreateReactEslintrc;
+exports.CreateEslintrc = CreateEslintrc;

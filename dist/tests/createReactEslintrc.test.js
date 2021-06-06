@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const CompareFileTest_1 = require("./model/CompareFileTest");
-const CreateReactEslintrc_1 = require("createEnvScripts/CreateReactEslintrc");
+const CreateReactEslintrc_1 = require("createEnvScripts/CreateEslintrc");
 const filePath = "src/tests/testFiles/reactEslintrc.js";
-const createReactEslintrc = new CreateReactEslintrc_1.CreateReactEslintrc(filePath);
+const createReactEslintrc = new CreateReactEslintrc_1.CreateEslintrc(filePath);
 createReactEslintrc.writeFile();
 const purposeFileName = "reactEslintrc.js";
 const testFileName = "reactEslintrc.js";
