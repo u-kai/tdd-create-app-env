@@ -1,16 +1,17 @@
 import {exeCommand} from "functions/ExeCommand"
 import {editReactPackageJson} from "createEnvScripts/EditReactPackageJson"
+import * as path from "path"
 export class PackageJsonOperater{
-    path:string
-    constructor(path:string){
-        this.path = path
+    topPath:string
+    constructor(topPath:string){
+        this.topPath = topPath
     }
     init = ():void => {
-        const cmd = `cd ${this.path}
+        const cmd = `cd ${this.topPath}
         yarn init -y`
         exeCommand(cmd)
     }
     editToReact = ():void => {
-        editReactPackageJson(`${this.path}/package.json`)
+        editReactPackageJson(path.resolve(this.topPath,"package.json"))
     }
 } 

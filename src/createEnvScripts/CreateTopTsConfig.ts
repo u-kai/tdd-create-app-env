@@ -5,7 +5,7 @@ export class CreateTopTsConfig {
     filePath: string
     fileData: ObjectType
     constructor(filePath: string) {
-        this.filePath = path.resolve(filePath,"ts-config.json")
+        this.filePath = path.resolve(filePath,"tsconfig.json")
         this.fileData = {
             exclude: ['.'],
         }

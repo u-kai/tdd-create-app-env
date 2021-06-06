@@ -1,4 +1,4 @@
-import {createSrcIndexTsx} from "createEnvScripts/CreateSrcIndexTsx"
+import {reateSrcIndex} from "createEnvScripts/CreateSrcIndex"
 import {CompareFileTest} from "./model/CompareFileTest"
 
 createSrcIndexTsx()

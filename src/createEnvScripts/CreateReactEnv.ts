@@ -13,6 +13,7 @@ import {CreateReactEslintrc} from "createEnvScripts/CreateReactEslintrc"
 import {DInstallEsLintPrettierHuskyPackagesReact} from "install-packages/InstallEslintPrettierHuskyPackages"
 import {CreateJestConfig} from "createEnvScripts/CreateJestConfig"
 import {DInstallJestPackages,DInstallJestPackagesReact} from "install-packages/InstallJestPackages"
+import {PackageJsonOperater} from "createEnvScripts/PackageJsonOperater"
 export class CreateReactEnv{ 
     private topPath:string
     constructor(topPath:string){
@@ -83,6 +84,10 @@ export class CreateReactEnv{
         const createJestConfing = new CreateJestConfig(this.topPath)
         createJestConfing.writeFile()
     }
+    editPacageJson = () => {
+        const editPackage = new PackageJsonOperater(this.topPath)
+        editPackage.editToReact() 
+    }
     run = ():void =>{
         this.createTopDir()
         this.yarnInit()
@@ -94,9 +99,11 @@ export class CreateReactEnv{
         this.createWeppackConfig()
         this.createSrcIndex()
         this.git()
+        this.installEslintETC()
         this.createEslintrc()
         this.installJest()
         this.createJestConfing()
         this.installReactJest()
+        this.editPacageJson()
     }
 }
