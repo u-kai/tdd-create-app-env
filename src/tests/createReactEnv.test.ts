@@ -18,14 +18,13 @@ const paths = [
 "src/index.tsx",
 "src/index.html",
 "node_modules/webpack",
+    ".eslintrc.js",
+    ".git",
+    ".gitignore",
+    "jest.config.ts"
 ]
-//     ".eslintrc.js",
-//     ".git",
-//     ".gitignore",
-//     "jest.config.json"
-// ]
-const createReactEnv = new CreateReactEnv(topPath)
-createReactEnv.run()
+// const createReactEnv = new CreateReactEnv(topPath)
+// createReactEnv.run()
 
 const existTestProvider = new ExistTestProvider(topPath,paths)
 existTestProvider.test()

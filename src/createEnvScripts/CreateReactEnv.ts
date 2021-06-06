@@ -8,8 +8,12 @@ import {DInstallTypescriptReactPackages} from "install-packages/InstallTypescrip
 import {CreateReactWebpackConfig} from "createEnvScripts/CreateReactWebpackConfig"
 import {DInstallWebpackPackages} from "install-packages/InstallWebpackPackages"
 import {CreateSrcIndex} from "createEnvScripts/CreateSrcIndex"
-
-export class CreateReactEnv{
+import {Giter} from "model/Giter"
+import {CreateReactEslintrc} from "createEnvScripts/CreateReactEslintrc"
+import {DInstallEsLintPrettierHuskyPackagesReact} from "install-packages/InstallEslintPrettierHuskyPackages"
+import {CreateJestConfig} from "createEnvScripts/CreateJestConfig"
+import {DInstallJestPackages,DInstallJestPackagesReact} from "install-packages/InstallJestPackages"
+export class CreateReactEnv{ 
     private topPath:string
     constructor(topPath:string){
         this.topPath = topPath
@@ -54,6 +58,31 @@ export class CreateReactEnv{
         createSrcIndex.createHtml()
         createSrcIndex.createTsx()
     }
+    git = () => {
+        const giter = new Giter(this.topPath)
+        giter.init()
+        giter.createIgnore()
+    }
+    installEslintETC = () => {
+        const cdAndDInastall = new CdAndInstall(this.topPath,DInstallEsLintPrettierHuskyPackagesReact)
+        cdAndDInastall.exeInstall()
+    }
+    createEslintrc = () => {
+        const createExlintrc = new CreateReactEslintrc(this.topPath)
+        createExlintrc.writeFile()
+    }
+    installJest = () => {
+        const cdAndDInastall = new CdAndInstall(this.topPath,DInstallJestPackages)
+        cdAndDInastall.exeInstall()
+    }
+    private installReactJest = () => {
+        const cdAndDInastall = new CdAndInstall(this.topPath, DInstallJestPackagesReact)
+        cdAndDInastall.exeInstall()
+    }
+    createJestConfing = () => {
+        const createJestConfing = new CreateJestConfig(this.topPath)
+        createJestConfing.writeFile()
+    }
     run = ():void =>{
         this.createTopDir()
         this.yarnInit()
@@ -64,5 +93,10 @@ export class CreateReactEnv{
         this.installWebpackPackages()
         this.createWeppackConfig()
         this.createSrcIndex()
+        this.git()
+        this.createEslintrc()
+        this.installJest()
+        this.createJestConfing()
+        this.installReactJest()
     }
 }

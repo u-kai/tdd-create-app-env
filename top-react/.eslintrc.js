@@ -1,10 +1,4 @@
-import {FileMaker} from "../model/FileMaker"
-import * as path from "path"
-export class CreateReactEslintrc extends FileMaker{
-    constructor(filePath:string){
-        super(filePath,"")
-        this.filePath = path.resolve(filePath, ".eslintrc.js")
-        this.fileContents = `module.exports = {
+module.exports = {
     env: {
     browser: true,
     es6: true
@@ -26,6 +20,4 @@ export class CreateReactEslintrc extends FileMaker{
     },
     root: true, // 上位ディレクトリにある他のeslintrcを参照しないようにする
     rules: {}
-}`
-    }
 }
