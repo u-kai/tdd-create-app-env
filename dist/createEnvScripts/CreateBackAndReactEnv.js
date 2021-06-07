@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CreateBackAndReactEnv = void 0;
-const CreateTopDirectory_1 = require("createEnvScripts/CreateTopDirectory");
-const CreateTopTsConfig_1 = require("createEnvScripts/CreateTopTsConfig");
+const CreateTopDirectory_1 = require("../createEnvScripts/CreateTopDirectory");
+const CreateTopTsConfig_1 = require("../createEnvScripts/CreateTopTsConfig");
 const CreateBackEnv_1 = require("../createEnvScripts/CreateBackEnv");
 const UseCreateReactAPP_1 = require("../createEnvScripts/UseCreateReactAPP");
 const path = require("path");

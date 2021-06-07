@@ -1,6 +1,6 @@
 import {exeCommand} from "../functions/ExeCommand"
-import {editReactPackageJson} from "createEnvScripts/EditReactPackageJson"
-import {editBackPackageJson} from "createEnvScripts/EditBackPackageJson"
+import {editReactPackageJson} from "../createEnvScripts/EditReactPackageJson"
+import {editBackPackageJson} from "../createEnvScripts/EditBackPackageJson"
 import * as path from "path"
 export class PackageJsonOperater{
     topPath:string

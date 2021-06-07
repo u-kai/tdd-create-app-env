@@ -1,5 +1,5 @@
-import {CreateTopDirectory} from "createEnvScripts/CreateTopDirectory"
-import {CreateTopTsConfig} from "createEnvScripts/CreateTopTsConfig"
+import {CreateTopDirectory} from "../createEnvScripts/CreateTopDirectory"
+import {CreateTopTsConfig} from "../createEnvScripts/CreateTopTsConfig"
 import {CreateBackEnv} from "../createEnvScripts/CreateBackEnv"
 import {UseCreateReactAPP} from "../createEnvScripts/UseCreateReactAPP"
 import * as path from "path"

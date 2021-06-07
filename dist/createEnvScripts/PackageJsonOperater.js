@@ -2,8 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.PackageJsonOperater = void 0;
 const ExeCommand_1 = require("../functions/ExeCommand");
-const EditReactPackageJson_1 = require("createEnvScripts/EditReactPackageJson");
-const EditBackPackageJson_1 = require("createEnvScripts/EditBackPackageJson");
+const EditReactPackageJson_1 = require("../createEnvScripts/EditReactPackageJson");
+const EditBackPackageJson_1 = require("../createEnvScripts/EditBackPackageJson");
 const path = require("path");
 class PackageJsonOperater {
     constructor(topPath) {
