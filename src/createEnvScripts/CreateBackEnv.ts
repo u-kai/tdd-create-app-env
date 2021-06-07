@@ -22,7 +22,7 @@ export class CreateBackEnv extends CreateEnv{
     }
     installEslintETC = () => {
         const cdAndDInastall = new CdAndInstall(this.topPath,DInstallEsLintPrettierHuskyPackagesBack)
-        cdAndDInastall.exeInstall()
+        cdAndDInastall.exeInstall("D")
     }
     createEslintrc = () => {
         const createExlintrc = new CreateEslintrc(this.topPath,"back")

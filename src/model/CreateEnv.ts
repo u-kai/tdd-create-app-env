@@ -1,7 +1,6 @@
 import {DirectoryMaker} from "../model/DirectoryMaker"
 import {exeCommand} from "../functions/ExeCommand"
 import {CreateDistSrcBuild} from "../createEnvScripts/CreateDistSrcBuild"
-import {CreateReactTsConfig} from "../createEnvScripts/CreateReactTSConfig"
 import {CdAndInstall} from "../model/CdAndInstall"
 import {DInstallTypescriptReactPackages} from "../install-packages/InstallTypescriptPackages"
 import {Giter} from "../model/Giter"
