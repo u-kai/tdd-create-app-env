@@ -22,4 +22,9 @@ export class CreateBackAndReactEnv{
         createReact.run()
         createBack.run()
     }
+    console = () => {
+        console.log(this.topPath)
+        console.log(this.reactPath)
+        console.log(this.backPath)
+    }
 }

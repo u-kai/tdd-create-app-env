@@ -27,8 +27,8 @@ const makeSubPaths = subPaths.map((sub)=>{
     return subpath
 }).join().split(",")
 
-// const createBackAndReactEnv = new CreateBackAndReactEnv(topPath)
-// createBackAndReactEnv.run()
+const createBackAndReactEnv = new CreateBackAndReactEnv(topPath)
+createBackAndReactEnv.console()
 makeSubPaths.map((m)=>console.log(m))
 const existTestProvider = new ExistTestProvider(topPath,makeSubPaths)
 existTestProvider.test()

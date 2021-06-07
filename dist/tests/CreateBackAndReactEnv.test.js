@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const CreateBackAndReactEnv_1 = require("../createEnvScripts/CreateBackAndReactEnv");
 const ExistTestProvider_1 = require("./model/ExistTestProvider");
 const topPath = "top-env";
 const subPaths = [
@@ -25,8 +26,8 @@ const makeSubPaths = subPaths.map((sub) => {
     });
     return subpath;
 }).join().split(",");
-// const createBackAndReactEnv = new CreateBackAndReactEnv(topPath)
-// createBackAndReactEnv.run()
+const createBackAndReactEnv = new CreateBackAndReactEnv_1.CreateBackAndReactEnv(topPath);
+createBackAndReactEnv.run();
 makeSubPaths.map((m) => console.log(m));
 const existTestProvider = new ExistTestProvider_1.ExistTestProvider(topPath, makeSubPaths);
 existTestProvider.test();

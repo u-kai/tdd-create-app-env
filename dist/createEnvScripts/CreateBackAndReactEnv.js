@@ -18,6 +18,11 @@ class CreateBackAndReactEnv {
             createReact.run();
             createBack.run();
         };
+        this.console = () => {
+            console.log(this.topPath);
+            console.log(this.reactPath);
+            console.log(this.backPath);
+        };
         this.topPath = topPath;
         this.reactPath = path.resolve(this.topPath, `${this.topPath}-react`);
         this.backPath = path.resolve(this.topPath, `${this.topPath}-back`);
