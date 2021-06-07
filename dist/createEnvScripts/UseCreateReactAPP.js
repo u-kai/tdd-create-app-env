@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UseCreateReactAPP = void 0;
-const CreateReactEslintrc_1 = require("../createEnvScripts/CreateEslintrc");
+const CreateEslintrc_1 = require("./CreateEslintrc");
 const InstallEslintPrettierHuskyPackages_1 = require("../install-packages/InstallEslintPrettierHuskyPackages");
 const Giter_1 = require("../model/Giter");
 const ExeCommand_1 = require("../functions/ExeCommand");
@@ -23,7 +23,7 @@ class UseCreateReactAPP {
             giter.createIgnore();
         };
         this.createEslintrc = () => {
-            const createExlintrc = new CreateReactEslintrc_1.CreateEslintrc(this.topPath);
+            const createExlintrc = new CreateEslintrc_1.CreateEslintrc(this.topPath, "react");
             createExlintrc.writeFile();
         };
         this.installEslintETC = () => {
