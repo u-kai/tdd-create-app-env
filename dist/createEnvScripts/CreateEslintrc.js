@@ -53,7 +53,7 @@ parserOptions: {
 "project": "./tsconfig.json" // TypeScriptのLint時に参照するconfigファイルを指定
 },
 root: true, // 上位ディレクトリにある他のeslintrcを参照しないようにする
-rules: {}
+rules: {"react/prop-types": 0}
 }`;
                 break;
             case "front":
