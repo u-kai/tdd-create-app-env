@@ -36,7 +36,7 @@ es6: true
 },
 extends: [
 "eslint:recommended",
-"plugin:react/recommended",
+//"plugin:react/recommended",
 "plugin:@typescript-eslint/recommended", // TypeScriptでチェックされる項目をLintから除外する設定
 "prettier"
 ],
@@ -50,7 +50,18 @@ parserOptions: {
 "project": "./tsconfig.json" // TypeScriptのLint時に参照するconfigファイルを指定
 },
 root: true, // 上位ディレクトリにある他のeslintrcを参照しないようにする
-rules: {"react/prop-types": 0}
+rules: {
+    "react/prop-types": 0,
+    "@typescript-eslint/ban-types": [
+        "error",
+        {
+          "extendDefaults": true,
+          "types": {
+            "{}": false
+          }
+          }  
+    ]
+}}
 }`
 break
 case "front":
