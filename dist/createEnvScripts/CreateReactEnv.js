@@ -42,11 +42,11 @@ class CreateReactEnv {
             const cdAndInstall = new CdAndInstall_1.CdAndInstall(this.topPath, InstallReactPackages_1.installReactPakcages);
             const cdAndDInastall = new CdAndInstall_1.CdAndInstall(this.topPath, InstallReactPackages_1.DInstallReactPackages);
             cdAndInstall.exeInstall();
-            cdAndDInastall.exeInstall("D");
+            cdAndDInastall.exeInstall('D');
         };
         this.installTypescriptPackages = () => {
             const cdAndDInastall = new CdAndInstall_1.CdAndInstall(this.topPath, InstallTypescriptPackages_1.DInstallTypescriptReactPackages);
-            cdAndDInastall.exeInstall("D");
+            cdAndDInastall.exeInstall('D');
         };
         this.createWeppackConfig = () => {
             const createReactWebpackConfig = new CreateReactWebpackConfig_1.CreateReactWebpackConfig(this.topPath);
@@ -54,7 +54,7 @@ class CreateReactEnv {
         };
         this.installWebpackPackages = () => {
             const cdAndDInastall = new CdAndInstall_1.CdAndInstall(this.topPath, InstallWebpackPackages_1.DInstallWebpackPackages);
-            cdAndDInastall.exeInstall();
+            cdAndDInastall.exeInstall('D');
         };
         this.createSrcIndex = () => {
             const createSrcIndex = new CreateSrcIndex_1.CreateSrcIndex(this.topPath);
@@ -68,19 +68,19 @@ class CreateReactEnv {
         };
         this.installEslintETC = () => {
             const cdAndDInastall = new CdAndInstall_1.CdAndInstall(this.topPath, InstallEslintPrettierHuskyPackages_1.DInstallEsLintPrettierHuskyPackagesReact);
-            cdAndDInastall.exeInstall();
+            cdAndDInastall.exeInstall('D');
         };
         this.createEslintrc = () => {
-            const createExlintrc = new CreateEslintrc_1.CreateEslintrc(this.topPath, "react");
+            const createExlintrc = new CreateEslintrc_1.CreateEslintrc(this.topPath, 'react');
             createExlintrc.writeFile();
         };
         this.installJest = () => {
             const cdAndDInastall = new CdAndInstall_1.CdAndInstall(this.topPath, InstallJestPackages_1.DInstallJestPackages);
-            cdAndDInastall.exeInstall();
+            cdAndDInastall.exeInstall('D');
         };
         this.installReactJest = () => {
             const cdAndDInastall = new CdAndInstall_1.CdAndInstall(this.topPath, InstallJestPackages_1.DInstallJestPackagesReact);
-            cdAndDInastall.exeInstall();
+            cdAndDInastall.exeInstall('D');
         };
         this.createJestConfing = () => {
             const createJestConfing = new CreateJestConfig_1.CreateJestConfig(this.topPath);

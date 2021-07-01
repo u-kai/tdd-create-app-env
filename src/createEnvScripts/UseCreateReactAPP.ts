@@ -1,34 +1,37 @@
-import {CreateEslintrc} from "./CreateEslintrc"
-import {DInstallEsLintPrettierHuskyPackagesReact} from "../install-packages/InstallEslintPrettierHuskyPackages"
-import {Giter} from "../model/Giter"
-import {exeCommand} from "../functions/ExeCommand"
-import {CdAndInstall} from "../model/CdAndInstall"
-import {ExeHusky} from "../createEnvScripts/ExeHusky"
-import {editReactPackageJson} from "../createEnvScripts/UseCreateReactAppPackageJson"
-import {createEnvFile} from "../createEnvScripts/CreateENVFile"
-import {installCreateReactAppPackages,DInstallCreateReactAppPackages} from "../install-packages/InstallCreateReactAppPackages"
-import {CreateUnderSrc} from "../createEnvScripts/CreateUnderSrc"
-export class UseCreateReactAPP{
-    topPath:string
-    constructor(topPath:string){
+import { CreateEslintrc } from './CreateEslintrc'
+import { DInstallEsLintPrettierHuskyPackagesReact } from '../install-packages/InstallEslintPrettierHuskyPackages'
+import { Giter } from '../model/Giter'
+import { exeCommand } from '../functions/ExeCommand'
+import { CdAndInstall } from '../model/CdAndInstall'
+import { ExeHusky } from '../createEnvScripts/ExeHusky'
+import { editReactPackageJson } from '../createEnvScripts/UseCreateReactAppPackageJson'
+import { createEnvFile } from '../createEnvScripts/CreateENVFile'
+import {
+    installCreateReactAppPackages,
+    DInstallCreateReactAppPackages,
+} from '../install-packages/InstallCreateReactAppPackages'
+import { CreateUnderSrc } from '../createEnvScripts/CreateUnderSrc'
+export class UseCreateReactAPP {
+    topPath: string
+    constructor(topPath: string) {
         this.topPath = topPath
     }
-    createReactApp = ():void => {
+    createReactApp = (): void => {
         const cmd = `npx create-react-app ${this.topPath} --template typescript`
         exeCommand(cmd)
     }
-    git = ():void => {
+    git = (): void => {
         const giter = new Giter(this.topPath)
         giter.init()
         giter.createIgnore()
     }
-    createEslintrc = ():void => {
-        const createExlintrc = new CreateEslintrc(this.topPath,"react")
+    createEslintrc = (): void => {
+        const createExlintrc = new CreateEslintrc(this.topPath, 'react')
         createExlintrc.writeFile()
     }
     installEslintETC = () => {
-        const cdAndDInastall = new CdAndInstall(this.topPath,DInstallEsLintPrettierHuskyPackagesReact)
-        cdAndDInastall.exeInstall("D")
+        const cdAndDInastall = new CdAndInstall(this.topPath, DInstallEsLintPrettierHuskyPackagesReact)
+        cdAndDInastall.exeInstall('D')
     }
     editPackage = () => {
         editReactPackageJson(this.topPath)
@@ -40,17 +43,17 @@ export class UseCreateReactAPP{
     createEnvFile = () => {
         createEnvFile(this.topPath)
     }
-    installPackages = ():void => {
-        const cdAndInstall = new CdAndInstall(this.topPath,installCreateReactAppPackages)
+    installPackages = (): void => {
+        const cdAndInstall = new CdAndInstall(this.topPath, installCreateReactAppPackages)
         cdAndInstall.exeInstall()
-        const cdAndDInastall = new CdAndInstall(this.topPath,DInstallCreateReactAppPackages)
-        cdAndDInastall.exeInstall("D")
+        const cdAndDInastall = new CdAndInstall(this.topPath, DInstallCreateReactAppPackages)
+        cdAndDInastall.exeInstall('D')
     }
     createUnderSrc = () => {
         const createUnderSrc = new CreateUnderSrc(this.topPath)
         createUnderSrc.mkdirs()
     }
-    run = ():void =>{
+    run = (): void => {
         this.createReactApp()
         this.createEnvFile()
         this.git()

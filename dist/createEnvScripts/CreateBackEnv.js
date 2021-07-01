@@ -16,18 +16,18 @@ class CreateBackEnv extends CreateEnv_1.CreateEnv {
             const cdAndInstall = new CdAndInstall_1.CdAndInstall(this.topPath, InstallBackPackages_1.installBackPackages);
             const cdAndDInastall = new CdAndInstall_1.CdAndInstall(this.topPath, InstallBackPackages_1.DInstallBackPackages);
             cdAndInstall.exeInstall();
-            cdAndDInastall.exeInstall("D");
+            cdAndDInastall.exeInstall('D');
         };
         this.installTypescriptPackages = () => {
             const cdAndDInastall = new CdAndInstall_1.CdAndInstall(this.topPath, InstallTypescriptPackages_1.DInstallTypescriptBackPackages);
-            cdAndDInastall.exeInstall("D");
+            cdAndDInastall.exeInstall('D');
         };
         this.installEslintETC = () => {
             const cdAndDInastall = new CdAndInstall_1.CdAndInstall(this.topPath, InstallEslintPrettierHuskyPackages_1.DInstallEsLintPrettierHuskyPackagesBack);
-            cdAndDInastall.exeInstall("D");
+            cdAndDInastall.exeInstall('D');
         };
         this.createEslintrc = () => {
-            const createExlintrc = new CreateEslintrc_1.CreateEslintrc(this.topPath, "back");
+            const createExlintrc = new CreateEslintrc_1.CreateEslintrc(this.topPath, 'back');
             createExlintrc.writeFile();
         };
         this.editPacageJson = () => {

@@ -23,12 +23,12 @@ class UseCreateReactAPP {
             giter.createIgnore();
         };
         this.createEslintrc = () => {
-            const createExlintrc = new CreateEslintrc_1.CreateEslintrc(this.topPath, "react");
+            const createExlintrc = new CreateEslintrc_1.CreateEslintrc(this.topPath, 'react');
             createExlintrc.writeFile();
         };
         this.installEslintETC = () => {
             const cdAndDInastall = new CdAndInstall_1.CdAndInstall(this.topPath, InstallEslintPrettierHuskyPackages_1.DInstallEsLintPrettierHuskyPackagesReact);
-            cdAndDInastall.exeInstall("D");
+            cdAndDInastall.exeInstall('D');
         };
         this.editPackage = () => {
             UseCreateReactAppPackageJson_1.editReactPackageJson(this.topPath);
@@ -44,7 +44,7 @@ class UseCreateReactAPP {
             const cdAndInstall = new CdAndInstall_1.CdAndInstall(this.topPath, InstallCreateReactAppPackages_1.installCreateReactAppPackages);
             cdAndInstall.exeInstall();
             const cdAndDInastall = new CdAndInstall_1.CdAndInstall(this.topPath, InstallCreateReactAppPackages_1.DInstallCreateReactAppPackages);
-            cdAndDInastall.exeInstall("D");
+            cdAndDInastall.exeInstall('D');
         };
         this.createUnderSrc = () => {
             const createUnderSrc = new CreateUnderSrc_1.CreateUnderSrc(this.topPath);

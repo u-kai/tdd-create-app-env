@@ -51,7 +51,7 @@ class CreateEnv {
         };
         this.installJest = () => {
             const cdAndDInastall = new CdAndInstall_1.CdAndInstall(this.topPath, InstallJestPackages_1.DInstallJestPackages);
-            cdAndDInastall.exeInstall();
+            cdAndDInastall.exeInstall('D');
         };
         this.createJestConfing = () => {
             const createJestConfing = new CreateJestConfig_1.CreateJestConfig(this.topPath);

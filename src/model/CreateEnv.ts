@@ -52,7 +52,7 @@ export class CreateEnv {
     }
     installJest = (): void => {
         const cdAndDInastall = new CdAndInstall(this.topPath, DInstallJestPackages)
-        cdAndDInastall.exeInstall()
+        cdAndDInastall.exeInstall('D')
     }
     createJestConfing = (): void => {
         const createJestConfing = new CreateJestConfig(this.topPath)
