@@ -32,7 +32,7 @@ class Giter {
 .env.development.local
 .env.test.local
 .env.production.local
-
+.vscode
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

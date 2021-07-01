@@ -1,9 +1,9 @@
-import {exeCommand} from "../functions/ExeCommand"
-import {FileMaker} from "../model/FileMaker"
-export class Giter{
-    parentPath:string
-    gitIgnore:string
-    constructor(parentPath:string){
+import { exeCommand } from '../functions/ExeCommand'
+import { FileMaker } from '../model/FileMaker'
+export class Giter {
+    parentPath: string
+    gitIgnore: string
+    constructor(parentPath: string) {
         this.parentPath = parentPath
         this.gitIgnore = `/node_modules
 /.pnp
@@ -21,7 +21,7 @@ export class Giter{
 .env.development.local
 .env.test.local
 .env.production.local
-
+.vscode
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -34,14 +34,14 @@ package-lock.json
 .DS_Store
 *.log`
     }
-    init = ():void => {
+    init = (): void => {
         const cmd = `cd ${this.parentPath}
                     git init`
         exeCommand(cmd)
     }
-    createIgnore = () => {
+    createIgnore = (): void => {
         const gitIgnorePath = `${this.parentPath}/.gitignore`
-        const fileMaker = new FileMaker(gitIgnorePath,this.gitIgnore)
+        const fileMaker = new FileMaker(gitIgnorePath, this.gitIgnore)
         fileMaker.writeFile()
     }
 }
