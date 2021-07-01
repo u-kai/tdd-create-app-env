@@ -8,7 +8,7 @@ export class DirectoryMaker {
     isExist = (): boolean => {
         return fs.existsSync(this.directoryName)
     }
-    mkdir = ():void => {
+    mkdir = (): void => {
         if (!this.isExist()) {
             fs.mkdirSync(this.directoryName)
         }
