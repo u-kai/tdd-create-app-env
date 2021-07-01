@@ -5,12 +5,17 @@ const fs = require("fs");
 class EditJsonFile {
     constructor(filePath, changeKey, changeData) {
         this.readFile = () => {
-            return JSON.parse(fs.readFileSync(this.filePath, "utf-8"));
+            return JSON.parse(fs.readFileSync(this.filePath, 'utf-8'));
         };
         this.edit = () => {
             const fileData = this.readFile();
             fileData[this.changeKey] = this.changeData;
-            fs.writeFileSync(this.filePath, JSON.stringify(fileData, null, "\t"));
+            fs.writeFileSync(this.filePath, JSON.stringify(fileData, null, '\t'));
+        };
+        this.add = () => {
+            const fileData = this.readFile();
+            Object.keys(this.changeData).map((key) => (fileData[this.changeKey][key] = this.changeData[key]));
+            fs.writeFileSync(this.filePath, JSON.stringify(fileData, null, '\t'));
         };
         this.filePath = filePath;
         this.changeKey = changeKey;

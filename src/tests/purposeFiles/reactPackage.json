@@ -8,7 +8,8 @@
 		"compile": "tsc",
 		"prepare": "husky install",
 		"lint-fix": "eslint --fix './src/**/*.{js,ts,tsx}' && prettier --write './src/**/*.{js,ts,tsx}'",
-    "lint-staged":"lint-staged"
+        "lint-staged":"lint-staged",
+		"kai":"udo"
 	},
   "author": "",
   "license": "ISC",

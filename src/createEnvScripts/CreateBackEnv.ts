@@ -20,19 +20,19 @@ export class CreateBackEnv extends CreateEnv {
         const cdAndDInastall = new CdAndInstall(this.topPath, DInstallTypescriptBackPackages)
         cdAndDInastall.exeInstall('D')
     }
-    installEslintETC = () => {
+    installEslintETC = (): void => {
         const cdAndDInastall = new CdAndInstall(this.topPath, DInstallEsLintPrettierHuskyPackagesBack)
         cdAndDInastall.exeInstall('D')
     }
-    createEslintrc = () => {
+    createEslintrc = (): void => {
         const createExlintrc = new CreateEslintrc(this.topPath, 'back')
         createExlintrc.writeFile()
     }
-    editPacageJson = () => {
+    editPacageJson = (): void => {
         const editPackage = new PackageJsonOperater(this.topPath)
         editPackage.editToBack()
     }
-    createTsConfig = () => {
+    createTsConfig = (): void => {
         const createBackTsConfig = new CreateBackTsConfig(this.topPath)
         createBackTsConfig.createFile()
     }

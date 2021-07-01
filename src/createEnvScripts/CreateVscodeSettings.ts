@@ -1,5 +1,5 @@
-import { DirectoryMaker } from 'model/DirectoryMaker'
-import { FileMaker } from 'model/FileMaker'
+import { DirectoryMaker } from '../model/DirectoryMaker'
+import { FileMaker } from '../model/FileMaker'
 import * as path from 'path'
 export class CreateVscodeSettings extends DirectoryMaker {
     private fileMaker: FileMaker

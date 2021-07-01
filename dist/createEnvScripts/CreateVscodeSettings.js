@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CreateVscodeSettings = void 0;
-const DirectoryMaker_1 = require("model/DirectoryMaker");
-const FileMaker_1 = require("model/FileMaker");
+const DirectoryMaker_1 = require("../model/DirectoryMaker");
+const FileMaker_1 = require("../model/FileMaker");
 const path = require("path");
 class CreateVscodeSettings extends DirectoryMaker_1.DirectoryMaker {
     constructor(topPath) {
