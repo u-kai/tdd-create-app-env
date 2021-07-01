@@ -4,7 +4,6 @@ const CdAndInstall_1 = require("./model/CdAndInstall");
 const InstallEslintPrettierHuskyPackages_1 = require("./install-packages/InstallEslintPrettierHuskyPackages");
 const InstallEslintPrettierHuskyPackages_2 = require("./install-packages/InstallEslintPrettierHuskyPackages");
 const CreateEslintrc_1 = require("./createEnvScripts/CreateEslintrc");
-const PackageJsonOperater_1 = require("./createEnvScripts/PackageJsonOperater");
 const CreateVscodeSettings_1 = require("./createEnvScripts/CreateVscodeSettings");
 const EditJsonFile_1 = require("./createEnvScripts/EditJsonFile");
 const main = () => {
@@ -15,13 +14,11 @@ const main = () => {
         const cdAndDInastall = new CdAndInstall_1.CdAndInstall(topPath, InstallEslintPrettierHuskyPackages_2.DInstallEsLintPrettierHuskyPackagesReact);
         cdAndDInastall.exeInstall('D');
         new CreateEslintrc_1.CreateEslintrc(topPath, 'react').writeFile();
-        new PackageJsonOperater_1.PackageJsonOperater(topPath).editToReact();
     }
     if (isReact === undefined) {
         const cdAndDInastall = new CdAndInstall_1.CdAndInstall(topPath, InstallEslintPrettierHuskyPackages_1.DInstallEsLintPrettierHuskyPackagesBack);
         cdAndDInastall.exeInstall('D');
         new CreateEslintrc_1.CreateEslintrc(topPath, 'back').writeFile();
-        new PackageJsonOperater_1.PackageJsonOperater(topPath).editToBack();
     }
     new CreateVscodeSettings_1.CreateVscodeSettings(topPath).createDirAndFile();
     const scripts = {

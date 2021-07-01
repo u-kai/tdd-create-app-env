@@ -8,7 +8,12 @@ import { EditJsonFile } from 'createEnvScripts/EditJsonFile'
 
 const filePath = 'src/tests/testFiles/reactPackage.json'
 editReactPackageJson(filePath)
-new EditJsonFile(filePath, 'scripts', { udo: 'kai' }).add()
+const scripts = {
+    prepare: 'husky install',
+    'lint-staged': 'lint-staged',
+    'lint-fix': "eslint --fix './src/**/*.{js,ts,tsx}' && prettier --write './src/**/*.{js,ts,tsx}'",
+}
+new EditJsonFile(filePath, 'scripts', scripts).add()
 const purposeFileName = 'reactPackage.json'
 const testFileName = 'reactPackage.json'
 

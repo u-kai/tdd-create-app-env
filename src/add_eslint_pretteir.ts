@@ -2,7 +2,6 @@ import { CdAndInstall } from './model/CdAndInstall'
 import { DInstallEsLintPrettierHuskyPackagesBack } from './install-packages/InstallEslintPrettierHuskyPackages'
 import { DInstallEsLintPrettierHuskyPackagesReact } from './install-packages/InstallEslintPrettierHuskyPackages'
 import { CreateEslintrc } from './createEnvScripts/CreateEslintrc'
-import { PackageJsonOperater } from './createEnvScripts/PackageJsonOperater'
 import { CreateVscodeSettings } from './createEnvScripts/CreateVscodeSettings'
 import { EditJsonFile } from './createEnvScripts/EditJsonFile'
 
@@ -14,13 +13,11 @@ const main = () => {
         const cdAndDInastall = new CdAndInstall(topPath, DInstallEsLintPrettierHuskyPackagesReact)
         cdAndDInastall.exeInstall('D')
         new CreateEslintrc(topPath, 'react').writeFile()
-        new PackageJsonOperater(topPath).editToReact()
     }
     if (isReact === undefined) {
         const cdAndDInastall = new CdAndInstall(topPath, DInstallEsLintPrettierHuskyPackagesBack)
         cdAndDInastall.exeInstall('D')
         new CreateEslintrc(topPath, 'back').writeFile()
-        new PackageJsonOperater(topPath).editToBack()
     }
     new CreateVscodeSettings(topPath).createDirAndFile()
     const scripts = {

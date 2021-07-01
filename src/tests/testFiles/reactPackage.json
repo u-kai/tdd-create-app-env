@@ -9,8 +9,7 @@
 		"test": "jest",
 		"prepare": "husky install",
 		"lint-staged": "lint-staged",
-		"lint-fix": "eslint --fix './src/**/*.{js,ts,tsx}' && prettier --write './src/**/*.{js,ts,tsx}'",
-		"udo": "kai"
+		"lint-fix": "eslint --fix './src/**/*.{js,ts,tsx}' && prettier --write './src/**/*.{js,ts,tsx}'"
 	},
 	"author": "",
 	"license": "ISC",

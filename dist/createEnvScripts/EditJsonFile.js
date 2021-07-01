@@ -13,7 +13,7 @@ class EditJsonFile {
             fs.writeFileSync(this.filePath, JSON.stringify(fileData, null, '\t'));
         };
         this.add = () => {
-            const fileData = this.readFile();
+            let fileData = this.readFile();
             Object.keys(this.changeData).map((key) => (fileData[this.changeKey][key] = this.changeData[key]));
             fs.writeFileSync(this.filePath, JSON.stringify(fileData, null, '\t'));
         };
