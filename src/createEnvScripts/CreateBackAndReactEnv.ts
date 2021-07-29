@@ -4,6 +4,7 @@ import { CreateBackEnv } from '../createEnvScripts/CreateBackEnv'
 import { UseCreateReactAPP } from '../createEnvScripts/UseCreateReactAPP'
 import * as path from 'path'
 import { CreateTopSchema } from './CreateTopSchema'
+import { CreateCodegenYml } from './CreateCodgenYml'
 export class CreateBackAndReactEnv {
     topPath: string
     reactPath: string
@@ -21,6 +22,8 @@ export class CreateBackAndReactEnv {
         //
         //const createTopSchema = new CreateTopSchema(this.topPath)
         //createTopSchema.createFile()
+        //const createTopCodegenYaml = new CreateCodegenYml(this.topPath)
+        // createTopCodegenYaml.writeFile()
         const createReact = new UseCreateReactAPP(this.reactPath)
         const createBack = new CreateBackEnv(this.backPath)
         createReact.run()
