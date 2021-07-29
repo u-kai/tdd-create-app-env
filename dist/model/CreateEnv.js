@@ -10,7 +10,7 @@ const Giter_1 = require("../model/Giter");
 const InstallEslintPrettierHuskyPackages_1 = require("../install-packages/InstallEslintPrettierHuskyPackages");
 const CreateJestConfig_1 = require("../createEnvScripts/CreateJestConfig");
 const InstallJestPackages_1 = require("../install-packages/InstallJestPackages");
-const CreateVscodeSettings_1 = require("createEnvScripts/CreateVscodeSettings");
+const CreateVscodeSettings_1 = require("../createEnvScripts/CreateVscodeSettings");
 class CreateEnv {
     constructor(topPath) {
         this.createTopDir = () => {

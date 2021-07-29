@@ -6,18 +6,15 @@ class CreateBackTsConfig extends CreateTopTsConfig_1.CreateTopTsConfig {
     constructor(filePath) {
         super(filePath);
         this.fileData = {
-            "compilerOptions": {
-                "outDir": "./dist",
-                "target": "ES2015",
-                "moduleResolution": "node",
-                "module": "commonjs",
-                "strict": true,
-                "baseUrl": "src"
+            compilerOptions: {
+                outDir: './dist',
+                target: 'ES2015',
+                moduleResolution: 'node',
+                module: 'commonjs',
+                strict: true,
             },
-            "include": [
-                "./src/**/*"
-            ],
-            "exclude": ["./node_modules"]
+            include: ['./src/**/*'],
+            exclude: ['./node_modules'],
         };
     }
 }

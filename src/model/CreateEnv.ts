@@ -7,7 +7,7 @@ import { Giter } from '../model/Giter'
 import { DInstallEsLintPrettierHuskyPackagesReact } from '../install-packages/InstallEslintPrettierHuskyPackages'
 import { CreateJestConfig } from '../createEnvScripts/CreateJestConfig'
 import { DInstallJestPackages } from '../install-packages/InstallJestPackages'
-import { CreateVscodeSettings } from 'createEnvScripts/CreateVscodeSettings'
+import { CreateVscodeSettings } from '../createEnvScripts/CreateVscodeSettings'
 
 export class CreateEnv {
     topPath: string
