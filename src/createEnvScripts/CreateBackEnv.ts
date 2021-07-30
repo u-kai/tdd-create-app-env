@@ -3,7 +3,7 @@ import { DInstallBackPackages, installBackPackages } from '../install-packages/I
 import { CdAndInstall } from '../model/CdAndInstall'
 import { DInstallTypescriptBackPackages } from '../install-packages/InstallTypescriptPackages'
 import { DInstallEsLintPrettierHuskyPackagesBack } from '../install-packages/InstallEslintPrettierHuskyPackages'
-import { InstallGraphQl } from '../install-packages/InstallGraphQLServers'
+import { InstallGraphQl, DInstallGraphQL } from '../install-packages/InstallGraphQLServers'
 import { CreateEslintrc } from './CreateEslintrc'
 import { PackageJsonOperater } from '../createEnvScripts/PackageJsonOperater'
 import { CreateBackTsConfig } from './CreateBackTsConfig'
@@ -27,7 +27,9 @@ export class CreateBackEnv extends CreateEnv {
     }
     //    installGraphQL = (): void => {
     //       const cdAndInstall = new CdAndInstall(this.topPath, InstallGraphQl)
+    //      const cdAndDInstall = new CdAndInstall(this.path,DInstallGraphQL)
     //     cdAndInstall.exeInstall()
+    //     cdAndDInstall.exeInstall("D")
     // }
     createEslintrc = (): void => {
         const createExlintrc = new CreateEslintrc(this.topPath, 'back')
