@@ -1,4 +1,4 @@
-import { FileMaker } from 'model/FileMaker'
+import { FileMaker } from '../model/FileMaker'
 import { join } from 'path'
 export class CreateCodegenYml {
     private filePath: string

@@ -26,6 +26,12 @@ class CreateBackEnv extends CreateEnv_1.CreateEnv {
             const cdAndDInastall = new CdAndInstall_1.CdAndInstall(this.topPath, InstallEslintPrettierHuskyPackages_1.DInstallEsLintPrettierHuskyPackagesBack);
             cdAndDInastall.exeInstall('D');
         };
+        //    installGraphQL = (): void => {
+        //       const cdAndInstall = new CdAndInstall(this.topPath, InstallGraphQl)
+        //      const cdAndDInstall = new CdAndInstall(this.path,DInstallGraphQL)
+        //     cdAndInstall.exeInstall()
+        //     cdAndDInstall.exeInstall("D")
+        // }
         this.createEslintrc = () => {
             const createExlintrc = new CreateEslintrc_1.CreateEslintrc(this.topPath, 'back');
             createExlintrc.writeFile();

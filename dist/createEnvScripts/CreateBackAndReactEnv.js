@@ -13,6 +13,11 @@ class CreateBackAndReactEnv {
             createTopDir.mkdir();
             const createTsConfig = new CreateTopTsConfig_1.CreateTopTsConfig(this.topPath);
             createTsConfig.createFile();
+            //
+            //const createTopSchema = new CreateTopSchema(this.topPath)
+            //createTopSchema.createFile()
+            //const createTopCodegenYaml = new CreateCodegenYml(this.topPath)
+            // createTopCodegenYaml.writeFile()
             const createReact = new UseCreateReactAPP_1.UseCreateReactAPP(this.reactPath);
             const createBack = new CreateBackEnv_1.CreateBackEnv(this.backPath);
             createReact.run();

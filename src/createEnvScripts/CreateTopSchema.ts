@@ -1,6 +1,6 @@
-import { ObjectType } from 'types/ObjectsType'
+import { ObjectType } from '../types/ObjectsType'
 import * as path from 'path'
-import { JsonFileMaker } from 'model/JsonFileMaker'
+import { JsonFileMaker } from '../model/JsonFileMaker'
 
 export class CreateTopSchema {
     filePath: string
