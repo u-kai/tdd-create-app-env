@@ -14,7 +14,7 @@ class CdAndInstall extends Installer_1.Installer {
         };
         this.returnDCmdWithCd = () => {
             if (this.cdPath === '') {
-                return this.returnCmd();
+                return this.returnDCmd();
             }
             return `cd ${this.cdPath}\n${this.returnDCmd()}`;
         };

@@ -15,7 +15,7 @@ export class CdAndInstall extends Installer {
 
     returnDCmdWithCd = (): string => {
         if (this.cdPath === '') {
-            return this.returnCmd()
+            return this.returnDCmd()
         }
         return `cd ${this.cdPath}\n${this.returnDCmd()}`
     }
