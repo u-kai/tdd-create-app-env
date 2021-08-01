@@ -1,5 +1,5 @@
 export const DInstallEsLintPrettierHuskyPackagesReact = [
-    'husky',
+    // 'husky',
     'eslint',
     'lint-staged',
     'prettier',
@@ -11,7 +11,7 @@ export const DInstallEsLintPrettierHuskyPackagesReact = [
 ]
 
 export const DInstallEsLintPrettierHuskyPackagesBack = [
-    'husky',
+    // 'husky',
     'eslint',
     'lint-staged',
     'prettier',
