@@ -7,9 +7,15 @@ class CdAndInstall extends Installer_1.Installer {
     constructor(cdPath, packages) {
         super(packages);
         this.returnCmdWithCd = () => {
+            if (this.cdPath === '') {
+                return this.returnCmd();
+            }
             return `cd ${this.cdPath}\n${this.returnCmd()}`;
         };
         this.returnDCmdWithCd = () => {
+            if (this.cdPath === '') {
+                return this.returnCmd();
+            }
             return `cd ${this.cdPath}\n${this.returnDCmd()}`;
         };
         this.exeInstall = (d) => {

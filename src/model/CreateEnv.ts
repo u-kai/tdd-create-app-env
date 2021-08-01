@@ -28,7 +28,7 @@ export class CreateEnv {
     }
     yarnInit = (): void => {
         const cmd = `cd ${this.topPath}
-        yarn init -y`
+        npm init -y`
         exeCommand(cmd)
     }
     git = (): void => {

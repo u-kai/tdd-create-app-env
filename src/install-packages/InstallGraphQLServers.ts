@@ -1,10 +1,12 @@
 export const InstallGraphQl = [
     '@graphql-tools/load',
-    '@graphql-toos/schema',
+    '@graphql-tools/schema',
     '@graphql-tools/graphql-file-loader',
     'graphql',
-    'apollo-server',
     'graphql-import',
+    'apollo-server-express',
+    'subscriptions-transport-ws',
+    'graphql-subscriptions',
 ]
 export const DInstallGraphQL = [
     '@graphql-codegen/cli ',

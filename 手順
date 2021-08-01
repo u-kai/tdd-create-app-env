@@ -9,8 +9,8 @@ o 3.backDir frontDirの作成 ok
 o 1.dist src build ディレクトリの作成
 
 -----------------------------------------------------front react ------------------
-o 4f.yarn init -y -> package.json生成
-o 5f.yarn add --save-dev typescript　→　typescriptの構築
+o 4f.npm init -y -> package.json生成
+o 5f.npm install --save-dev typescript　→　typescriptの構築
 o 6f.ts-configの作成　→ コマンドでも可能だが，バージョン等の情報はないため，自作で設定ファイルを作成した方が良さそう -> ok
 o 7f.yarn install -D webpack webpack-cil  -> webpackのインストール
 o 8f.yarn install -D ts-loader
@@ -31,15 +31,15 @@ o 19f.webpack.config.jsの中を編集　ok
 touch build/index.js
 argv=`pwd`
 o git init
-o yarn init -y
+o npm init -y
 # node ~/my_command/createEnvJSScripts/package/createInitPackage.js ${argv} ${1}
-o yarn add --save-dev  typescript
-o yarn add --save-dev  tsc-watch
-o yarn add @types/node ts-node tsconfig-paths   package.json ni register
-o yarn add -D jest 
-o yarn add -D @types/jest ts-jest 
-yarn add @types/express 
-yarn add express 
+o npm install --save-dev  typescript
+o npm install --save-dev  tsc-watch
+o npm install @types/node ts-node tsconfig-paths   package.json ni register
+o npm install -D jest 
+o npm install -D @types/jest ts-jest 
+npm install @types/express 
+npm install express 
 node ~/my_command/createEnvJSScripts/jest/jestConfig.js ${argv} ${1}
 node ~/my_command/createEnvJSScripts/change.js ${argv}
 create-eslint-prettier-back
@@ -61,8 +61,8 @@ echo "{
 }" > tsconfig.json
 cd ../
 -----------------------------------------prettier eslint husky----------------------------
-o 1p-e.yarn add -D husky eslint lint-staged prettier eslint-config-prettier eslint-plugin-prettier　-> eslint prettierを合わせるために必要なものやハスキーをインストール
-o 2p-e.yarn add -D @typescript-eslint/parser @typescript-eslint/eslint-plugin　eslint-plugin-react
+o 1p-e.npm install -D husky eslint lint-staged prettier eslint-config-prettier eslint-plugin-prettier　-> eslint prettierを合わせるために必要なものやハスキーをインストール
+o 2p-e.npm install -D @typescript-eslint/parser @typescript-eslint/eslint-plugin　eslint-plugin-react
 o 3p-e.package.jsonにlint-stagedの項目を追加 ----ok
 o 4p-e.npx husky install -> huskyの準備
 o 5p-e.npx husky add .husky/pre-commit "yarn lint-staged"

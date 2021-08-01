@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.DInstallEsLintPrettierHuskyPackagesBack = exports.DInstallEsLintPrettierHuskyPackagesReact = void 0;
 exports.DInstallEsLintPrettierHuskyPackagesReact = [
-    'husky',
+    // 'husky',
     'eslint',
     'lint-staged',
     'prettier',
@@ -13,7 +13,7 @@ exports.DInstallEsLintPrettierHuskyPackagesReact = [
     'eslint-plugin-react',
 ];
 exports.DInstallEsLintPrettierHuskyPackagesBack = [
-    'husky',
+    // 'husky',
     'eslint',
     'lint-staged',
     'prettier',

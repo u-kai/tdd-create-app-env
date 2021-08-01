@@ -9,14 +9,14 @@ class PackageJsonOperater {
     constructor(topPath) {
         this.init = () => {
             const cmd = `cd ${this.topPath}
-        yarn init -y`;
+        npm init -y`;
             ExeCommand_1.exeCommand(cmd);
         };
         this.editToReact = () => {
-            EditReactPackageJson_1.editReactPackageJson(path.resolve(this.topPath, "package.json"));
+            EditReactPackageJson_1.editReactPackageJson(path.resolve(this.topPath, 'package.json'));
         };
         this.editToBack = () => {
-            EditBackPackageJson_1.editBackPackageJson(path.resolve(this.topPath, "package.json"));
+            EditBackPackageJson_1.editBackPackageJson(path.resolve(this.topPath, 'package.json'));
         };
         this.topPath = topPath;
     }

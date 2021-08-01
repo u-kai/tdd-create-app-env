@@ -27,7 +27,7 @@ class CreateEnv {
         };
         this.yarnInit = () => {
             const cmd = `cd ${this.topPath}
-        yarn init -y`;
+        npm init -y`;
             ExeCommand_1.exeCommand(cmd);
         };
         this.git = () => {

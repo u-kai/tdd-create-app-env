@@ -5,16 +5,16 @@ const ExeCommand_1 = require("../functions/ExeCommand");
 class Installer {
     constructor(packageNames) {
         this.returnCmd = () => {
-            let cmd = "";
+            let cmd = '';
             this.packageNames.map((packageName) => {
-                cmd += `yarn add ${packageName}\n`;
+                cmd += `npm install ${packageName}\n`;
             });
             return cmd.substr(0, cmd.length - 1);
         };
         this.returnDCmd = () => {
-            let cmd = "";
+            let cmd = '';
             this.packageNames.map((packageName) => {
-                cmd += `yarn add -D ${packageName}\n`;
+                cmd += `npm install -D ${packageName}\n`;
             });
             return cmd.substr(0, cmd.length - 1);
         };

@@ -27,7 +27,7 @@ export class CreateReactEnv {
     }
     yarnInit = (): void => {
         const cmd = `cd ${this.topPath}
-        yarn init -y`
+        npm init -y`
         exeCommand(cmd)
     }
     createChilderns = (): void => {

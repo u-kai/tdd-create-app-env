@@ -11,7 +11,7 @@ const scripts = {
     'ts-node': './node_modules/.bin/ts-node -r tsconfig-paths/register',
     test: 'jest',
     watch: 'tsc-watch --onSuccess "npm start"',
-    prepare: 'husky install',
+    //prepare: 'husky install',
     'lint-staged': 'lint-staged',
     'lint-fix': "eslint --fix './src/**/*.{js,ts,tsx}' && prettier --write './src/**/*.{js,ts,tsx}'",
 };
