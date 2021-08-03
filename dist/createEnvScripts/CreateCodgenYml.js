@@ -10,7 +10,7 @@ class CreateCodegenYml {
         };
         this.filePath = path_1.join(dirname, 'codegen.yml');
         this.fileContents = `overwrite: true
-        generates:
+generates:
           ./src/types/generated/graphql.ts:
             schema: schema.graphql
             config:

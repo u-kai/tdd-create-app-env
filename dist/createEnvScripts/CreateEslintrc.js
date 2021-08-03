@@ -5,10 +5,10 @@ const FileMaker_1 = require("../model/FileMaker");
 const path = require("path");
 class CreateEslintrc extends FileMaker_1.FileMaker {
     constructor(filePath, brf) {
-        super(filePath, "");
-        this.filePath = path.resolve(filePath, ".eslintrc.js");
+        super(filePath, '');
+        this.filePath = path.resolve(filePath, '.eslintrc.js');
         switch (brf) {
-            case "back":
+            case 'back':
                 this.fileContents = `module.exports = {
 env: {
     browser: true,
@@ -31,7 +31,7 @@ root: true, // 上位ディレクトリにある他のeslintrcを参照しない
 rules: {}
 }`;
                 break;
-            case "react":
+            case 'react':
                 this.fileContents = `module.exports = {
 env: {
 browser: true,
@@ -65,9 +65,9 @@ rules: {
           }  
     ]
 }}
-}`;
+`;
                 break;
-            case "front":
+            case 'front':
                 this.fileContents = `module.exports = {
 env: {
 browser: true,

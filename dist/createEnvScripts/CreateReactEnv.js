@@ -19,6 +19,7 @@ const InstallJestPackages_1 = require("../install-packages/InstallJestPackages")
 const PackageJsonOperater_1 = require("../createEnvScripts/PackageJsonOperater");
 const CreateUnderSrc_1 = require("../createEnvScripts/CreateUnderSrc");
 const CreateENVFile_1 = require("../createEnvScripts/CreateENVFile");
+const CreateVscodeSettings_1 = require("./CreateVscodeSettings");
 class CreateReactEnv {
     constructor(topPath) {
         this.createTopDir = () => {
@@ -27,8 +28,12 @@ class CreateReactEnv {
         };
         this.yarnInit = () => {
             const cmd = `cd ${this.topPath}
-        npm init -y`;
+        yarn init -y`;
             ExeCommand_1.exeCommand(cmd);
+        };
+        this.createVscodeSettings = () => {
+            const createVscodeSettings = new CreateVscodeSettings_1.CreateVscodeSettings(this.topPath);
+            createVscodeSettings.createDirAndFile();
         };
         this.createChilderns = () => {
             const createDistSrcBuild = new CreateDistSrcBuild_1.CreateDistSrcBuild(this.topPath);
@@ -115,6 +120,7 @@ class CreateReactEnv {
             this.installReactJest();
             this.editPacageJson();
             this.createEnvFile();
+            this.createVscodeSettings();
             this.createUnderSrc();
         };
         this.topPath = topPath;
