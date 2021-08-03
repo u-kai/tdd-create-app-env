@@ -16,6 +16,7 @@ import { DInstallJestPackages, DInstallJestPackagesReact } from '../install-pack
 import { PackageJsonOperater } from '../createEnvScripts/PackageJsonOperater'
 import { CreateUnderSrc } from '../createEnvScripts/CreateUnderSrc'
 import { createEnvFile } from '../createEnvScripts/CreateENVFile'
+import { CreateVscodeSettings } from './CreateVscodeSettings'
 export class CreateReactEnv {
     private topPath: string
     constructor(topPath: string) {
@@ -27,8 +28,12 @@ export class CreateReactEnv {
     }
     yarnInit = (): void => {
         const cmd = `cd ${this.topPath}
-        npm init -y`
+        yarn init -y`
         exeCommand(cmd)
+    }
+    createVscodeSettings = (): void => {
+        const createVscodeSettings = new CreateVscodeSettings(this.topPath)
+        createVscodeSettings.createDirAndFile()
     }
     createChilderns = (): void => {
         const createDistSrcBuild = new CreateDistSrcBuild(this.topPath)
@@ -115,6 +120,7 @@ export class CreateReactEnv {
         this.installReactJest()
         this.editPacageJson()
         this.createEnvFile()
+        this.createVscodeSettings()
         this.createUnderSrc()
     }
 }

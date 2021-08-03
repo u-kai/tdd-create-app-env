@@ -9,6 +9,9 @@ export class CreateVscodeSettings extends DirectoryMaker {
         const fileContent = `{
             "[typescript]": {
                 "editor.defaultFormatter": "esbenp.prettier-vscode" // フォーマッタをprettierに指定
+            },"[typescriptreact]":{
+                "editor.formatOnSave": true,
+                "editor.defaultFormatter": "esbenp.prettier-vscode"
             },
             "editor.formatOnSave": true, // ファイル保存時にPrettierでフォーマット
             "editor.codeActionsOnSave": {
