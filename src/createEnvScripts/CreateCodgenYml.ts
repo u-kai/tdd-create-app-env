@@ -6,7 +6,7 @@ export class CreateCodegenYml {
     constructor(dirname: string) {
         this.filePath = join(dirname, 'codegen.yml')
         this.fileContents = `overwrite: true
-        generates:
+generates:
           ./src/types/generated/graphql.ts:
             schema: schema.graphql
             config:

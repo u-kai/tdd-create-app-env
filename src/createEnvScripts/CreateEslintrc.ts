@@ -1,11 +1,11 @@
-import {FileMaker} from "../model/FileMaker"
-import * as path from "path"
-export class CreateEslintrc extends FileMaker{
-    constructor(filePath:string,brf:"back"|"react"|"front"){
-        super(filePath,"")
-        this.filePath = path.resolve(filePath, ".eslintrc.js")
-        switch(brf){
-            case "back":
+import { FileMaker } from '../model/FileMaker'
+import * as path from 'path'
+export class CreateEslintrc extends FileMaker {
+    constructor(filePath: string, brf: 'back' | 'react' | 'front') {
+        super(filePath, '')
+        this.filePath = path.resolve(filePath, '.eslintrc.js')
+        switch (brf) {
+            case 'back':
                 this.fileContents = `module.exports = {
 env: {
     browser: true,
@@ -27,9 +27,9 @@ parserOptions: {
 root: true, // 上位ディレクトリにある他のeslintrcを参照しないようにする
 rules: {}
 }`
-break
-        case "react":
-            this.fileContents = `module.exports = {
+                break
+            case 'react':
+                this.fileContents = `module.exports = {
 env: {
 browser: true,
 es6: true
@@ -62,10 +62,10 @@ rules: {
           }  
     ]
 }}
-}`
-break
-case "front":
-    this.fileContents = `module.exports = {
+`
+                break
+            case 'front':
+                this.fileContents = `module.exports = {
 env: {
 browser: true,
 es6: true
@@ -87,6 +87,5 @@ root: true, // 上位ディレクトリにある他のeslintrcを参照しない
 rules: {}
 }`
         }
-        
     }
 }
